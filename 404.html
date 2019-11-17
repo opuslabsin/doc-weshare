@@ -43,6 +43,146 @@
 
 <link rel="alternate" type="application/rss+xml" title="documentation-weshare" href="opuslabsin.github.io/feed.xml">
 
+<style type="text/css">
+	.home {
+	width: 100%;
+    height: 700px;
+    background: -moz-linear-gradient(to bottom,#5789B4 0,#2171B6 52%);
+    background: -webkit-linear-gradient(to bottom,#5789B4 0,#2171B6 52%);
+    background: linear-gradient(to bottom,#5789B4 0,#2171B6 52%);
+}
+.jumbo {
+	border-radius: initial;
+    margin-bottom: auto;
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    top: 260px;
+    right: 0;
+}
+#home-title {
+    font-size: 2.9em;
+    text-align: center;
+    color: #fff;
+    font-family: times, arial !important;
+    font-weight: 600;
+}
+
+#home-title-txt {
+    font-size: 22px;
+    text-align: center;
+    color: #fff;
+    font-family: open-sans, Tahoma, Verdana, sans-serif !important;
+}
+
+#scroll-down {
+    position: absolute;
+    left: 50%;
+    top: 350%;
+    z-index: 1;
+}
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 700px;
+  background-color: transparent;  
+}
+
+.post-content {
+	padding-top: 100px;
+}
+
+div#toc >ul::before {
+	font-size: 24px;
+}
+
+.down-scroll a {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    z-index: 2;
+    display: inline-block;
+    -webkit-transform: translate(0,-50%);
+    transform: translate(0,-50%);
+    color: #fff;
+    font: 400 20px / 1 'Josefin Sans', sans-serif;
+    letter-spacing: .1em;
+    text-decoration: none;
+    transition: opacity .3s;
+    transition-duration: .5s;
+    transition-property: all;
+    transition-timing-function: ease-in-out;
+}
+
+#scroll-down a span
+{
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 45px;
+	height: 45px;
+	margin-left: -23px;
+	border: 1px solid #fff;
+	border-radius: 100%;
+	box-sizing: border-box;
+}
+
+#scroll-down a span::after
+{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	content: '';
+	width: 16px;
+	height: 16px;
+	margin: -12px 0 0 -8px;
+	border-left: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+	-webkit-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	box-sizing: border-box;
+}
+
+#scroll-down a span::before
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	content: '';
+	width: 44px;
+	height: 44px;
+	box-shadow: 0 0 0 0 rgba(255,255,255,.1);
+	border-radius: 100%;
+	opacity: 0;
+	-webkit-animation: 3s infinite sdb03;
+	animation: 3s infinite sdb03;
+	box-sizing: border-box;
+}
+
+.down-scroll a:hover
+{
+	transition: all 1s ease;
+	-webkit-transition: 1s ease-out;
+	-moz-transition: 1s ease-out;
+	-o-transition: 1s ease-out;
+	opacity: .5;
+	transition: all 1s ease;
+	bottom: 1%;
+	color: #fff;
+	-webkit-transition: 1s ease-out;
+	-moz-transition: 1s ease-out;
+	-o-transition: 1s ease-out;
+	opacity: .5;
+}
+
+@-webkit-keyframes sdb03{0%,100%{opacity:0}30%{opacity:1}60%{box-shadow:0 0 0 60px rgba(255,255,255,.1);opacity:0}} 
+
+@keyframes sdb03{0%,100%{opacity:0}30%{opacity:1}60%{box-shadow:0 0 0 60px rgba(255,255,255,.1);opacity:0}} 
+
+</style>
+
     <script>
         $(document).ready(function() {
             // Initialize navgoco with default options
@@ -95,55 +235,34 @@
 
 </head>
 <body>
-<!-- Navigation -->
-<nav class="navbar navbar-inverse navbar-static-top" style="min-height:75px;">
-    <div class="container topnavlinks">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="index.html"><img style="height:50px;" src="images/company_logo.png" alt="Company logo"/></a>
-        </div>
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right" style="margin-top:12px;">
-                <!-- toggle sidebar button -->
-                <!--<li><a id="tg-sb-link" href="#"><i id="tg-sb-icon" class="fa fa-toggle-on"></i> Nav</a></li>-->
-                <!-- entries without drop-downs appear here -->
+    
+    <!-- Page Content -->
+    <section class="home">
+        <div class="area">
+            <div id="particles-js"></div>
+            <div class="jumbo">
+                <div class="container ">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <p id="home-title">Page Not Found</p>
+                            <p id="home-title-txt"></p>
+                        </div>                        
+                        <section id="scroll-down" class="down-scroll"><a href="#introduction"><span class="mx-auto"></span></a>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="container">
+          <div id="main">
 
-
-
-
+            <!-- Content Row -->
+            <div class="row">
                 
                 
-                
-                <li><a href="https://opuslabs.freshdesk.com/" target="_blank">Support</a></li>
-                
-                
-                
-                <!-- entries with drop-downs appear here -->
-                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
-                
-                
-            </ul>
-        </div>
-        </div>
-        <!-- /.container -->
-</nav>
-
-<!-- Page Content -->
-<div class="container">
-  <div id="main">
-
-    <!-- Content Row -->
-    <div class="row">
-        
-        
-            <!-- Sidebar Column -->
-            <div class="col-md-3" id="tg-sb-sidebar">
-                
+                <!-- Sidebar Column -->
+                <div class="col-md-3" id="tg-sb-sidebar">
+                    
 
 <ul id="mysidebar" class="nav">
   <li class="sidebarTitle"> </li>
@@ -197,17 +316,13 @@
 <!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
 <script>$("li.active").parents('li').toggleClass("active");</script>
 
-            </div>
-            
-        
+                </div>
+                
+                
 
-        <!-- Content Column -->
-        <div class="col-md-9" id="tg-sb-content">
-            <div class="post-header">
-   <h1 class="post-title-main">Page Not Found</h1>
-</div>
-
-
+                <!-- Content Column -->
+                <div class="col-md-9" id="tg-sb-content">
+                    
 
 <div class="post-content">
 
@@ -262,19 +377,134 @@ $('#toc').on('click', 'a', function() {
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2019 Opus Labs. All rights reserved. <br />
- Site last generated: Nov 17, 2019 <br />
+ Site last generated: Nov 18, 2019 <br />
 <p><img src="images/company_logo_dark.png" alt="Company logo"/></p>
                 </div>
             </div>
 </footer>
 
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" crossorigin="anonymous"></script>
+<script type="text/javascript">
+	/* ---- particles.js config ---- */
 
+particlesJS("particles-js", {
+  "particles": {
+    "number": {
+      "value": 120,
+      "density": {
+        "enable": false,
+        "value_area": 800
+      }
+    },
+    "color": {
+      "value": "#ffffff"
+    },
+    "shape": {
+      "type": "circle",
+      "stroke": {
+        "width": 0,
+        "color": "#000000"
+      },
+      "polygon": {
+        "nb_sides": 5
+      },
+      "image": {
+        "src": "img/github.svg",
+        "width": 100,
+        "height": 100
+      }
+    },
+    "opacity": {
+      "value": 0.5,
+      "random": false,
+      "anim": {
+        "enable": false,
+        "speed": 1,
+        "opacity_min": 0.1,
+        "sync": false
+      }
+    },
+    "size": {
+      "value": 3,
+      "random": true,
+      "anim": {
+        "enable": false,
+        "speed": 40,
+        "size_min": 0.1,
+        "sync": false
+      }
+    },
+    "line_linked": {
+      "enable": true,
+      "distance": 150,
+      "color": "#ffffff",
+      "opacity": 0.4,
+      "width": 1
+    },
+    "move": {
+      "enable": true,
+      "speed": 4,
+      "direction": "none",
+      "random": true,
+      "straight": false,
+      "out_mode": "out",
+      "bounce": true,
+      "attract": {
+        "enable": false,
+        "rotateX": 600,
+        "rotateY": 1200
+      }
+    }
+  },
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": {
+      "onhover": {
+        "enable": true,
+        "mode": "grab"
+      },
+      "onclick": {
+        "enable": true,
+        "mode": "push"
+      },
+      "resize": true
+    },
+    "modes": {
+      "grab": {
+        "distance": 140,
+        "line_linked": {
+          "opacity": 1
+        }
+      },
+      "bubble": {
+        "distance": 400,
+        "size": 40,
+        "duration": 2,
+        "opacity": 8,
+        "speed": 3
+      },
+      "repulse": {
+        "distance": 200,
+        "duration": 0.4
+      },
+      "push": {
+        "particles_nb": 4
+      },
+      "remove": {
+        "particles_nb": 2
+      }
+    }
+  },
+  "retina_detect": true
+});
+</script>
+
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.container -->
         </div>
-    <!-- /.row -->
-</div>
-<!-- /.container -->
-</div>
-<!-- /#main -->
+        <!-- /#main -->
     </div>
 
 </body>
