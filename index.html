@@ -222,19 +222,24 @@ This guide assumes you have some experience in setting up PHP based web applicat
 </ol>
 
 <ul>
-  <li><strong>App related</strong>:
+  <li><strong>App related -  Very Important</strong>:
     <ul>
       <li>APP_NAME: Title of your app</li>
       <li>APP_URL: Url of your backend</li>
     </ul>
   </li>
-  <li><strong>Database related</strong>:
+  <li><strong>Database related -  Very Important</strong>:
     <ul>
       <li>DB_HOST: Database host, usually it’s localhost</li>
       <li>DB_PORT: Database port, incase of mysql it’s usually 3306</li>
       <li>DB_DATABASE: Database Name</li>
       <li>DB_USERNAME: Database username</li>
       <li>DB_PASSWORD: Database password</li>
+    </ul>
+  </li>
+  <li><strong>Firebase related -  Very Important</strong>:
+    <ul>
+      <li>FIREBASE_ISS: Required to succefully login through FB/Google, Value: <code class="highlighter-rouge">https://securetoken.google.com/&lt;firebase-project-id&gt;</code>. If not setup properly authentication in your app will not work properly.</li>
     </ul>
   </li>
   <li><strong>Push Notification related</strong>:
@@ -272,6 +277,11 @@ If you are integrating with mailgun, you can simply set following values in .env
       <li>Now angular would have created/updated the <code class="highlighter-rouge">dist</code> folder in root with updated compiled files</li>
       <li>You need to copy all the files in <code class="highlighter-rouge">dist</code> folder to you Laravel’s <code class="highlighter-rouge">public/admin</code> folder.</li>
       <li>For example <code class="highlighter-rouge">cp -r weshare-angular/dist/* weshare/public/admin/</code> assuming <code class="highlighter-rouge">weshare-angular</code> is your angular project folder and <code class="highlighter-rouge">weshare</code> is your laravel project folder</li>
+      <li>There is also a quicker way to configure admin panel, if you do not want to do the compilation of angular project you can follow these steps but since it requires editing a non formatted js file some users might find it bit confusing or hard</li>
+      <li>Open <code class="highlighter-rouge">public/admin/main.&lt;some-random-code&gt;.js</code> file in any editor of your choice</li>
+      <li>Update Base Url - Search for <code class="highlighter-rouge">http://opuslabs.in:9083/api/admin</code> and replace it with your backend url for example <code class="highlighter-rouge">http://weshare.com/weshare/public/api/admin</code></li>
+      <li>Update Project Title - Search for <code class="highlighter-rouge">Weshare</code> and replace it with your project title</li>
+      <li>This is a just a quicker way to make ready your admin panel so that you do not have to compile whole angular project, if you are unable to configure admin panel this way, kindly fallback to steps mentioned previously that requires compilation of angular project</li>
     </ul>
   </li>
 </ol>
