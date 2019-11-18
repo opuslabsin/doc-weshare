@@ -177,6 +177,41 @@ div#toc >ul::before {
 	opacity: .5;
 }
 
+.container-fluid {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.nav div.logo {
+    float: left;
+    width: auto;
+    height: auto;
+    padding-left: 3rem;
+}
+
+.nav {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    width: 100%;
+    height: 65px;
+    position: absolute;
+    line-height: 40px;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease;
+    z-index: 9999 !important;
+}
+
 @-webkit-keyframes sdb03{0%,100%{opacity:0}30%{opacity:1}60%{box-shadow:0 0 0 60px rgba(255,255,255,.1);opacity:0}} 
 
 @keyframes sdb03{0%,100%{opacity:0}30%{opacity:1}60%{box-shadow:0 0 0 60px rgba(255,255,255,.1);opacity:0}} 
@@ -235,7 +270,12 @@ div#toc >ul::before {
 
 </head>
 <body>
-    
+    <nav class="nav">
+        <div class="container-fluid">
+            <div class="logo"><a href="#"><img src="images/opus-dot.png" alt=""></a>
+            </div>            
+        </div>
+    </nav>
     <!-- Page Content -->
     <section class="home">
         <div class="area">
