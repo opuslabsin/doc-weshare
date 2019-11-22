@@ -212,9 +212,202 @@ div#toc >ul::before {
     z-index: 9999 !important;
 }
 
+footer {
+    color: #fff;
+    background-color: #2171B6;
+    padding-top: 137px;
+    padding-bottom: 40px;    
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    overflow: hidden;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin: 0;
+}
+
+.oval-wrap {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 232px;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.bg-oval {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    min-width: 2424px;
+    height: 866px;
+}
+.bg-oval img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+#footer-cta {
+    overflow: visible;
+    text-align: center;
+    padding-top: 438px;
+    padding-bottom: 19px;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    overflow: hidden;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+#footer-cta .bg-wrap {
+    height: 460px;
+}
+.bg-wrap {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+#footer-cta .background {
+    width: 605px;
+    margin-left: -302px;
+}
+.background.cn {
+    left: 50%;
+    width: 1800px;
+    margin-left: -900px;
+}
+.basic-scaler {
+    transform-origin: center top;
+}
+.background {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+}
+#footer-cta.on .blob {
+    -webkit-animation: floatY infinite 10s ease-in-out;
+    -moz-animation: floatY infinite 10s ease-in-out;
+    animation: floatY infinite 10s ease-in-out;
+    animation-fill-mode: forwards;
+    animation-duration: 8s;
+}
+#footer-cta .blob[data-num="1"] {
+    width: 150px;
+    left: 50px;
+    top: 242px;
+}
+.part {
+    position: absolute;
+    left: 40px;
+    top: 0;
+}
+#footer-cta .background .main {
+    width: 505px;
+}
+
+.part img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+#footer-cta.on .blob[data-num="2"] {
+    animation-delay: -5s;
+}
+#footer-cta.on .blob {
+    -webkit-animation: floatY infinite 10s ease-in-out;
+    -moz-animation: floatY infinite 10s ease-in-out;
+    animation: floatY infinite 10s ease-in-out;
+    animation-fill-mode: forwards;
+    animation-duration: 8s;
+}
+#footer-cta .blob[data-num="2"] {
+    width: 130px;
+    left: 410px;
+    top: 65px;
+}
+
+#footer-cta.on .blob[data-num="2"] img {
+    animation-delay: -4s;
+}
+#footer-cta.on .blob img {
+    -webkit-animation: aboutWheelSpin infinite 15s linear;
+    -moz-animation: aboutWheelSpin infinite 15s linear;
+    animation: aboutWheelSpin infinite 15s linear;
+    animation-fill-mode: forwards;
+    animation-duration: 8s;
+}
+
+#footer-cta .man {
+    width: 140px;
+    left: 355px;
+    top: 120px;
+}
+
+.documentation {
+    padding-bottom: 100px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.section-col {
+    margin-top: 150px;
+}
+
+.section-title, #introduction {
+    font-size: 33px;
+    line-height: 1.55;    
+    margin-bottom: 20px;
+    color: #2171B6;
+    font-family: times, arial;
+}
+
 @-webkit-keyframes sdb03{0%,100%{opacity:0}30%{opacity:1}60%{box-shadow:0 0 0 60px rgba(255,255,255,.1);opacity:0}} 
 
 @keyframes sdb03{0%,100%{opacity:0}30%{opacity:1}60%{box-shadow:0 0 0 60px rgba(255,255,255,.1);opacity:0}} 
+
+@keyframes floatY {
+  0% {
+    transform: translateY(-20px);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}
+.float-y {
+  -webkit-animation: floatY infinite 10s ease-in-out;
+  -moz-animation: floatY infinite 10s ease-in-out;
+  animation: floatY infinite 10s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes aboutWheelSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.about-wheelspin {
+  -webkit-animation: aboutWheelSpin infinite 15s linear;
+  -moz-animation: aboutWheelSpin infinite 15s linear;
+  animation: aboutWheelSpin infinite 15s linear;
+  animation-fill-mode: forwards;
+}
 
 </style>
 
@@ -272,7 +465,7 @@ div#toc >ul::before {
 <body>
     <nav class="nav">
         <div class="container-fluid">
-            <div class="logo"><a href="#"><img src="images/opus-dot.png" alt=""></a>
+            <div class="logo"><a href="#"><img src="images/company_logo.png" alt=""></a>
             </div>            
         </div>
     </nav>
@@ -293,7 +486,7 @@ div#toc >ul::before {
                 </div>
             </div>
         </section>
-        <div class="container">
+        <div class="container documentation">
           <div id="main">
 
             <!-- Content Row -->
@@ -411,141 +604,142 @@ $('#toc').on('click', 'a', function() {
 
 </div>
 
-<hr class="shaded"/>
+
+
+                </div>
+                <!-- /.row -->
+            </div>           
+  <!-- /.container -->
+</div>
+<!-- /#main -->
+</div>
 
 <footer>
-            <div class="row">
-                <div class="col-lg-12 footer">
-               &copy;2019 Opus Labs. All rights reserved. <br />
- Site last generated: Nov 18, 2019 <br />
-<p><img src="images/company_logo_dark.png" alt="Company logo"/></p>
-                </div>
-            </div>
+  <div class="oval-wrap"><div class="bg-oval"><img src="images/bgoval-dark.svg"></div></div>
+  <div class="row">
+    <div class="col-lg-12 footer" style="text-align: center;">
+     &copy;2019 Opus Labs. All rights reserved. <br />
+      Site last generated: Nov 22, 2019 <br />
+     <p style="margin-top: 20px"><img src="images/company_logo.png" alt="Company logo"/></p>
+   </div>
+ </div>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" crossorigin="anonymous"></script>
 <script type="text/javascript">
 	/* ---- particles.js config ---- */
 
-particlesJS("particles-js", {
-  "particles": {
-    "number": {
-      "value": 120,
-      "density": {
-        "enable": false,
-        "value_area": 800
-      }
-    },
-    "color": {
-      "value": "#ffffff"
-    },
-    "shape": {
-      "type": "circle",
-      "stroke": {
-        "width": 0,
-        "color": "#000000"
-      },
-      "polygon": {
-        "nb_sides": 5
-      },
-      "image": {
-        "src": "img/github.svg",
-        "width": 100,
-        "height": 100
-      }
-    },
-    "opacity": {
-      "value": 0.5,
-      "random": false,
-      "anim": {
-        "enable": false,
-        "speed": 1,
-        "opacity_min": 0.1,
-        "sync": false
-      }
-    },
-    "size": {
-      "value": 3,
-      "random": true,
-      "anim": {
-        "enable": false,
-        "speed": 40,
-        "size_min": 0.1,
-        "sync": false
-      }
-    },
-    "line_linked": {
-      "enable": true,
-      "distance": 150,
-      "color": "#ffffff",
-      "opacity": 0.4,
-      "width": 1
-    },
-    "move": {
-      "enable": true,
-      "speed": 4,
-      "direction": "none",
-      "random": true,
-      "straight": false,
-      "out_mode": "out",
-      "bounce": true,
-      "attract": {
-        "enable": false,
-        "rotateX": 600,
-        "rotateY": 1200
-      }
-    }
-  },
-  "interactivity": {
-    "detect_on": "canvas",
-    "events": {
-      "onhover": {
-        "enable": true,
-        "mode": "grab"
-      },
-      "onclick": {
-        "enable": true,
-        "mode": "push"
-      },
-      "resize": true
-    },
-    "modes": {
-      "grab": {
-        "distance": 140,
-        "line_linked": {
-          "opacity": 1
+  particlesJS("particles-js", {
+    "particles": {
+      "number": {
+        "value": 120,
+        "density": {
+          "enable": false,
+          "value_area": 800
         }
       },
-      "bubble": {
-        "distance": 400,
-        "size": 40,
-        "duration": 2,
-        "opacity": 8,
-        "speed": 3
+      "color": {
+        "value": "#ffffff"
       },
-      "repulse": {
-        "distance": 200,
-        "duration": 0.4
+      "shape": {
+        "type": "circle",
+        "stroke": {
+          "width": 0,
+          "color": "#000000"
+        },
+        "polygon": {
+          "nb_sides": 5
+        },
+        "image": {
+          "src": "img/github.svg",
+          "width": 100,
+          "height": 100
+        }
       },
-      "push": {
-        "particles_nb": 4
+      "opacity": {
+        "value": 0.5,
+        "random": false,
+        "anim": {
+          "enable": false,
+          "speed": 1,
+          "opacity_min": 0.1,
+          "sync": false
+        }
       },
-      "remove": {
-        "particles_nb": 2
+      "size": {
+        "value": 3,
+        "random": true,
+        "anim": {
+          "enable": false,
+          "speed": 40,
+          "size_min": 0.1,
+          "sync": false
+        }
+      },
+      "line_linked": {
+        "enable": true,
+        "distance": 150,
+        "color": "#ffffff",
+        "opacity": 0.4,
+        "width": 1
+      },
+      "move": {
+        "enable": true,
+        "speed": 4,
+        "direction": "none",
+        "random": true,
+        "straight": false,
+        "out_mode": "out",
+        "bounce": true,
+        "attract": {
+          "enable": false,
+          "rotateX": 600,
+          "rotateY": 1200
+        }
       }
-    }
-  },
-  "retina_detect": true
-});
+    },
+    "interactivity": {
+      "detect_on": "canvas",
+      "events": {
+        "onhover": {
+          "enable": true,
+          "mode": "grab"
+        },
+        "onclick": {
+          "enable": true,
+          "mode": "push"
+        },
+        "resize": true
+      },
+      "modes": {
+        "grab": {
+          "distance": 140,
+          "line_linked": {
+            "opacity": 1
+          }
+        },
+        "bubble": {
+          "distance": 400,
+          "size": 40,
+          "duration": 2,
+          "opacity": 8,
+          "speed": 3
+        },
+        "repulse": {
+          "distance": 200,
+          "duration": 0.4
+        },
+        "push": {
+          "particles_nb": 4
+        },
+        "remove": {
+          "particles_nb": 2
+        }
+      }
+    },
+    "retina_detect": true
+  });
 </script>
-
-                </div>
-                <!-- /.row -->
-            </div>
-            <!-- /.container -->
-        </div>
-        <!-- /#main -->
-    </div>
 
 </body>
 

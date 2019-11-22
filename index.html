@@ -212,9 +212,202 @@ div#toc >ul::before {
     z-index: 9999 !important;
 }
 
+footer {
+    color: #fff;
+    background-color: #2171B6;
+    padding-top: 137px;
+    padding-bottom: 40px;    
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    overflow: hidden;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin: 0;
+}
+
+.oval-wrap {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 232px;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.bg-oval {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    min-width: 2424px;
+    height: 866px;
+}
+.bg-oval img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+#footer-cta {
+    overflow: visible;
+    text-align: center;
+    padding-top: 438px;
+    padding-bottom: 19px;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    overflow: hidden;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+#footer-cta .bg-wrap {
+    height: 460px;
+}
+.bg-wrap {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+#footer-cta .background {
+    width: 605px;
+    margin-left: -302px;
+}
+.background.cn {
+    left: 50%;
+    width: 1800px;
+    margin-left: -900px;
+}
+.basic-scaler {
+    transform-origin: center top;
+}
+.background {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+}
+#footer-cta.on .blob {
+    -webkit-animation: floatY infinite 10s ease-in-out;
+    -moz-animation: floatY infinite 10s ease-in-out;
+    animation: floatY infinite 10s ease-in-out;
+    animation-fill-mode: forwards;
+    animation-duration: 8s;
+}
+#footer-cta .blob[data-num="1"] {
+    width: 150px;
+    left: 50px;
+    top: 242px;
+}
+.part {
+    position: absolute;
+    left: 40px;
+    top: 0;
+}
+#footer-cta .background .main {
+    width: 505px;
+}
+
+.part img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+#footer-cta.on .blob[data-num="2"] {
+    animation-delay: -5s;
+}
+#footer-cta.on .blob {
+    -webkit-animation: floatY infinite 10s ease-in-out;
+    -moz-animation: floatY infinite 10s ease-in-out;
+    animation: floatY infinite 10s ease-in-out;
+    animation-fill-mode: forwards;
+    animation-duration: 8s;
+}
+#footer-cta .blob[data-num="2"] {
+    width: 130px;
+    left: 410px;
+    top: 65px;
+}
+
+#footer-cta.on .blob[data-num="2"] img {
+    animation-delay: -4s;
+}
+#footer-cta.on .blob img {
+    -webkit-animation: aboutWheelSpin infinite 15s linear;
+    -moz-animation: aboutWheelSpin infinite 15s linear;
+    animation: aboutWheelSpin infinite 15s linear;
+    animation-fill-mode: forwards;
+    animation-duration: 8s;
+}
+
+#footer-cta .man {
+    width: 140px;
+    left: 355px;
+    top: 120px;
+}
+
+.documentation {
+    padding-bottom: 100px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.section-col {
+    margin-top: 150px;
+}
+
+.section-title, #introduction {
+    font-size: 33px;
+    line-height: 1.55;    
+    margin-bottom: 20px;
+    color: #2171B6;
+    font-family: times, arial;
+}
+
 @-webkit-keyframes sdb03{0%,100%{opacity:0}30%{opacity:1}60%{box-shadow:0 0 0 60px rgba(255,255,255,.1);opacity:0}} 
 
 @keyframes sdb03{0%,100%{opacity:0}30%{opacity:1}60%{box-shadow:0 0 0 60px rgba(255,255,255,.1);opacity:0}} 
+
+@keyframes floatY {
+  0% {
+    transform: translateY(-20px);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}
+.float-y {
+  -webkit-animation: floatY infinite 10s ease-in-out;
+  -moz-animation: floatY infinite 10s ease-in-out;
+  animation: floatY infinite 10s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes aboutWheelSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.about-wheelspin {
+  -webkit-animation: aboutWheelSpin infinite 15s linear;
+  -moz-animation: aboutWheelSpin infinite 15s linear;
+  animation: aboutWheelSpin infinite 15s linear;
+  animation-fill-mode: forwards;
+}
 
 </style>
 
@@ -272,7 +465,7 @@ div#toc >ul::before {
 <body>
     <nav class="nav">
         <div class="container-fluid">
-            <div class="logo"><a href="#"><img src="images/opus-dot.png" alt=""></a>
+            <div class="logo"><a href="#"><img src="images/company_logo.png" alt=""></a>
             </div>            
         </div>
     </nav>
@@ -293,7 +486,7 @@ div#toc >ul::before {
                 </div>
             </div>
         </section>
-        <div class="container">
+        <div class="container documentation">
           <div id="main">
 
             <!-- Content Row -->
@@ -317,170 +510,223 @@ div#toc >ul::before {
 
     
 
+  <div>
   <h1 id="introduction">Introduction</h1>
-<p>The app is connected with Laravel 5.5 based CMS using REST APIs, the following documentation will guide you through the process to connect the app with your backend.
+  <p>The app is connected with Laravel 5.5 based CMS using REST APIs, the following documentation will guide you through the process to connect the app with your backend.
 This guide assumes you have some experience in setting up PHP based web applications and <a href="https://laravel.com/docs/5.5/">Laravel Framework 5.5</a>.</p>
+</div>
 
-<h1 id="setting-up-the-server">Setting up the server</h1>
-<ol>
-  <li>
-    <h3 id="server-requirement">Server Requirement</h3>
+<div class="row" style="padding-top: 100px">
+  <div class="col-md-6 section-col">
+    <h2 class="section-title">Instructions for setting up server</h2>
+  </div>
+  <div class="col-md-6">
+    <section id="footer-cta" class="hasAnim on" data-offset="100">
+      <div class="bg-wrap">
+        <div class="background cn basic-scaler">
+          <!-- animations -->
 
-    <p>The server on which you are going to deploy the backend must fulfill the following requirements:</p>
-    <ul>
-      <li>PHP &gt;= 7.0.0</li>
-      <li>Mysql 5.7</li>
-      <li>OpenSSL PHP Extension</li>
-      <li>PDO PHP Extension</li>
-      <li>Mbstring PHP Extension</li>
-      <li>Tokenizer PHP Extension</li>
-      <li>XML PHP Extension</li>
-    </ul>
-  </li>
-  <li>
-    <h3 id="deploying-backend">Deploying Backend</h3>
-    <p>Follow these steps:</p>
-    <ul>
-      <li>Extract the <code class="highlighter-rouge">weshare.zip</code> on your server</li>
-      <li>For example if your domain is http://weshare.com then you will be able to access the backend as http://weshare.com/weshare/public</li>
-    </ul>
-  </li>
-  <li>
-    <h3 id="configuration">Configuration</h3>
-    <p>All the major configuration values you will need to set in .env file which is present in root folder of the accompanied source code. Following are the most important values, you may set other values in .env as well if you have experience and requirment to do so:</p>
-  </li>
-</ol>
+          <div class="blob part" data-num="1"><img src="https://cognitohq.com/wp-content/themes/cognito/images/parts/footer-blob1.svg" /></div>
 
-<ul>
-  <li><strong>App related -  Very Important</strong>:
-    <ul>
-      <li>APP_NAME: Title of your app</li>
-      <li>APP_URL: Url of your backend</li>
-    </ul>
-  </li>
-  <li><strong>Database related -  Very Important</strong>:
-    <ul>
-      <li>DB_HOST: Database host, usually it’s localhost</li>
-      <li>DB_PORT: Database port, incase of mysql it’s usually 3306</li>
-      <li>DB_DATABASE: Database Name</li>
-      <li>DB_USERNAME: Database username</li>
-      <li>DB_PASSWORD: Database password</li>
-    </ul>
-  </li>
-  <li><strong>Firebase related -  Very Important</strong>:
-    <ul>
-      <li>FIREBASE_ISS: Required to succefully login through FB/Google, Value: <code class="highlighter-rouge">https://securetoken.google.com/&lt;firebase-project-id&gt;</code>. If not setup properly authentication in your app will not work properly.</li>
-    </ul>
-  </li>
-  <li><strong>Push Notification related</strong>:
-    <ul>
-      <li>ONESIGNAL_APP_ID</li>
-      <li>ONESIGNAL_REST_API</li>
-    </ul>
-  </li>
-  <li><strong>Email Related</strong>:
+          <div class="part main"><img src="https://cognitohq.com/wp-content/themes/cognito/images/parts/footer-cta.svg" /></div>      
+
+          <div class="part main"><img src="images/footer-girl-server@2x.png" /></div>
+
+          <div class="blob part" data-num="2"><img src="https://cognitohq.com/wp-content/themes/cognito/images/parts/footer-blob2.svg" /></div>          
+
+          <!-- end animations -->
+        </div>
+      </div>    
+    </section>
+  </div>  
+</div>
+
+<div>
+  <ol>
+    <li>
+      <h3 id="server-requirement">Server Requirement</h3>
+
+      <p>The server on which you are going to deploy the backend must fulfill the following requirements:</p>
+      <ul>
+        <li>PHP &gt;= 7.0.0</li>
+        <li>Mysql 5.7</li>
+        <li>OpenSSL PHP Extension</li>
+        <li>PDO PHP Extension</li>
+        <li>Mbstring PHP Extension</li>
+        <li>Tokenizer PHP Extension</li>
+        <li>XML PHP Extension</li>
+      </ul>
+    </li>
+    <li>
+      <h3 id="deploying-backend">Deploying Backend</h3>
+      <p>Follow these steps:</p>
+      <ul>
+        <li>Extract the <code class="highlighter-rouge">weshare.zip</code> on your server</li>
+        <li>For example if your domain is http://weshare.com then you will be able to access the backend as http://weshare.com/weshare/public</li>
+      </ul>
+    </li>
+    <li>
+      <h3 id="configuration">Configuration</h3>
+      <p>All the major configuration values you will need to set in .env file which is present in root folder of the accompanied source code. Following are the most important values, you may set other values in .env as well if you have experience and requirment to do so:</p>
+    </li>
+  </ol>
+
+  <ul>
+    <li><strong>App related -  Very Important</strong>:
+      <ul>
+        <li>APP_NAME: Title of your app</li>
+        <li>APP_URL: Url of your backend</li>
+      </ul>
+    </li>
+    <li><strong>Database related -  Very Important</strong>:
+      <ul>
+        <li>DB_HOST: Database host, usually it’s localhost</li>
+        <li>DB_PORT: Database port, incase of mysql it’s usually 3306</li>
+        <li>DB_DATABASE: Database Name</li>
+        <li>DB_USERNAME: Database username</li>
+        <li>DB_PASSWORD: Database password</li>
+      </ul>
+    </li>
+    <li><strong>Firebase related -  Very Important</strong>:
+      <ul>
+        <li>FIREBASE_ISS: Required to succefully login through FB/Google, Value: <code class="highlighter-rouge">https://securetoken.google.com/&lt;firebase-project-id&gt;</code>. If not setup properly authentication in your app will not work properly.</li>
+      </ul>
+    </li>
+    <li><strong>Push Notification related</strong>:
+      <ul>
+        <li>ONESIGNAL_APP_ID</li>
+        <li>ONESIGNAL_REST_API</li>
+      </ul>
+    </li>
+    <li><strong>Email Related</strong>:
 Email integration is provided with Mailgun, Amazon SES, SMTP. For more details refer to <a href="https://laravel.com/docs/5.5/mail">https://laravel.com/docs/5.5/mail</a>.
 If you are integrating with mailgun, you can simply set following values in .env
-    <ul>
-      <li>MAILGUN_DOMAIN</li>
-      <li>MAILGUN_SECRET</li>
-    </ul>
+      <ul>
+        <li>MAILGUN_DOMAIN</li>
+        <li>MAILGUN_SECRET</li>
+      </ul>
 
-    <p>If you need more configuration or advance setting, you can look for keys starting with MAIL_ in .env</p>
-  </li>
-</ul>
+      <p>If you need more configuration or advance setting, you can look for keys starting with MAIL_ in .env</p>
+    </li>
+  </ul>
 
-<ol>
-  <li>
-    <h3 id="database">Database</h3>
-    <p>In accompanied source code you will find a sql file named weshare.sql. Create the database and then import the file in your database.</p>
-  </li>
-  <li>
-    <h3 id="admin-panel">Admin Panel</h3>
-    <p>Admin panel is developed in Angular 7 and shipped in seperate folder. You will need to update app title and base url.</p>
-    <ul>
-      <li>Open <code class="highlighter-rouge">weshare-admin.zip</code>, it’s an Angualr 7 based project, nodejs version 8 or above is required</li>
-      <li>Run <code class="highlighter-rouge">npm install</code> command if this your first time</li>
-      <li>If you are not familiar with Angular 7 we will suggest you to get basic idea from <a href="https://angular.io/guide/quickstart">https://angular.io/guide/quickstart</a></li>
-      <li>In <code class="highlighter-rouge">src/app/@core/models/constants.model.ts</code> update value of <code class="highlighter-rouge">API_BASE_URL</code> and <code class="highlighter-rouge">APP_NAME</code>  variables</li>
-      <li>After making the required changes issue a command <code class="highlighter-rouge">ng build --prod</code></li>
-      <li>Now angular would have created/updated the <code class="highlighter-rouge">dist</code> folder in root with updated compiled files</li>
-      <li>You need to copy all the files in <code class="highlighter-rouge">dist</code> folder to you Laravel’s <code class="highlighter-rouge">public/admin</code> folder.</li>
-      <li>For example <code class="highlighter-rouge">cp -r weshare-angular/dist/* weshare/public/admin/</code> assuming <code class="highlighter-rouge">weshare-angular</code> is your angular project folder and <code class="highlighter-rouge">weshare</code> is your laravel project folder</li>
-      <li>There is also a quicker way to configure admin panel, if you do not want to do the compilation of angular project you can follow these steps but since it requires editing a non formatted js file some users might find it bit confusing or hard</li>
-      <li>Open <code class="highlighter-rouge">public/admin/main.&lt;some-random-code&gt;.js</code> file in any editor of your choice</li>
-      <li>Update Base Url - Search for <code class="highlighter-rouge">http://opuslabs.in:9083/api/admin</code> and replace it with your backend url for example <code class="highlighter-rouge">http://weshare.com/weshare/public/api/admin</code></li>
-      <li>Update Project Title - Search for <code class="highlighter-rouge">Weshare</code> and replace it with your project title</li>
-      <li>This is a just a quicker way to make ready your admin panel so that you do not have to compile whole angular project, if you are unable to configure admin panel this way, kindly fallback to steps mentioned previously that requires compilation of angular project</li>
-    </ul>
-  </li>
-</ol>
+  <ol>
+    <li>
+      <h3 id="database">Database</h3>
+      <p>In accompanied source code you will find a sql file named weshare.sql. Create the database and then import the file in your database.</p>
+    </li>
+    <li>
+      <h3 id="admin-panel">Admin Panel</h3>
+      <p>Admin panel is developed in Angular 7 and shipped in seperate folder. You will need to update app title and base url.</p>
+      <ul>
+        <li>Open <code class="highlighter-rouge">weshare-admin.zip</code>, it’s an Angualr 7 based project, nodejs version 8 or above is required</li>
+        <li>Run <code class="highlighter-rouge">npm install</code> command if this your first time</li>
+        <li>If you are not familiar with Angular 7 we will suggest you to get basic idea from <a href="https://angular.io/guide/quickstart">https://angular.io/guide/quickstart</a></li>
+        <li>In <code class="highlighter-rouge">src/app/@core/models/constants.model.ts</code> update value of <code class="highlighter-rouge">API_BASE_URL</code> and <code class="highlighter-rouge">APP_NAME</code>  variables</li>
+        <li>After making the required changes issue a command <code class="highlighter-rouge">ng build --prod</code></li>
+        <li>Now angular would have created/updated the <code class="highlighter-rouge">dist</code> folder in root with updated compiled files</li>
+        <li>You need to copy all the files in <code class="highlighter-rouge">dist</code> folder to you Laravel’s <code class="highlighter-rouge">public/admin</code> folder.</li>
+        <li>For example <code class="highlighter-rouge">cp -r weshare-angular/dist/* weshare/public/admin/</code> assuming <code class="highlighter-rouge">weshare-angular</code> is your angular project folder and <code class="highlighter-rouge">weshare</code> is your laravel project folder</li>
+        <li>There is also a quicker way to configure admin panel, if you do not want to do the compilation of angular project you can follow these steps but since it requires editing a non formatted js file some users might find it bit confusing or hard</li>
+        <li>Open <code class="highlighter-rouge">public/admin/main.&lt;some-random-code&gt;.js</code> file in any editor of your choice</li>
+        <li>Update Base Url - Search for <code class="highlighter-rouge">http://opuslabs.in:9083/api/admin</code> and replace it with your backend url for example <code class="highlighter-rouge">http://weshare.com/weshare/public/api/admin</code></li>
+        <li>Update Project Title - Search for <code class="highlighter-rouge">Weshare</code> and replace it with your project title</li>
+        <li>This is a just a quicker way to make ready your admin panel so that you do not have to compile whole angular project, if you are unable to configure admin panel this way, kindly fallback to steps mentioned previously that requires compilation of angular project</li>
+      </ul>
+    </li>
+  </ol>
+</div>
+<div class="row" style="padding-top: 100px">
+  <div class="col-md-6 section-col">
+    <h2 class="section-title">Instructions for building android mobile app</h2>
+  </div>
+  <div class="col-md-6">
+    <section id="footer-cta" class="hasAnim on" data-offset="100">
+      <div class="bg-wrap">
+        <div class="background cn basic-scaler">
+          <!-- animations -->
 
-<h1 id="mobile-app">Mobile App</h1>
-<ol>
-  <li>
-    <h3 id="setup-firebase-and-api-keys">Setup Firebase and Api keys</h3>
-    <ul>
-      <li>Login to http://console.firebase.google.com</li>
-      <li>Click on “Add project” to add new project -&gt; provide project name as you like and hit Create Project.</li>
-      <li>Now you have to Register apps in this project. Click “Add app” -&gt; choose platform Android</li>
-      <li>Each app has its unique ID known as “Package name” or “ApplicationId”. For more info on how to name one visit https://developer.android.com/studio/build/application-id</li>
-      <li>Enter package name as asked on firebase console.</li>
-      <li>Set a nickname(optional, but we’ll add total of three apps so..)</li>
-      <li>Enter your app signing certificate(Optional but important in order to make features work like social login and otp verification. here is how to have one -&gt; https://developers.google.com/android/guides/client-auth)</li>
-      <li>Click Register app. Upon succesful registration of app you’ll be provided with your configuration file(google-services.json) for that app.</li>
-      <li>Go to Authentication under Developer section and enable google login and facebook login.</li>
-      <li>Go to Database under Developer section and initiate real time database for chatting</li>
-      <li>Go to storage under Developer section  and enable that for media uploading</li>
-      <li>Lastly go to Dynamic links under Grow section and create app link for sharing</li>
-    </ul>
-  </li>
-  <li>
-    <h3 id="setup-onesignal">Setup Onesignal</h3>
-    <ul>
-      <li>Go to https://onesignal.com/ signup and create an app</li>
-      <li>Add server key and sernder id from firebase console(Cloud messaging under project settings)</li>
-      <li>You’ll get onesignal project id</li>
-    </ul>
-  </li>
-  <li>
-    <h3 id="downloadsetup-java-and-android-studio">Download/Setup Java and Android Studio</h3>
-    <ul>
-      <li>Download Java here: https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html</li>
-      <li>Download Android Studio here: https://developer.android.com/studio/
+          <div class="blob part" data-num="1"><img src="https://cognitohq.com/wp-content/themes/cognito/images/parts/footer-blob1.svg" /></div>
+
+          <div class="part main"><img src="https://cognitohq.com/wp-content/themes/cognito/images/parts/footer-cta.svg" /></div>      
+
+          <div class="part main"><img src="https://cognitohq.com/wp-content/themes/cognito/images/parts/footer-girl@2x.png" /></div>
+
+          <div class="blob part" data-num="2"><img src="https://cognitohq.com/wp-content/themes/cognito/images/parts/footer-blob2.svg" /></div>
+          <div class="man part"><img src="https://cognitohq.com/wp-content/themes/cognito/images/parts/footer-man@2x.png" /></div>
+
+          <!-- end animations -->
+        </div>
+      </div>    
+    </section>
+  </div>  
+</div>
+<div>
+  <ol>
+    <li>
+      <h3 id="setup-firebase-and-api-keys">Setup Firebase and Api keys</h3>
+      <ul>
+        <li>Login to http://console.firebase.google.com</li>
+        <li>Click on “Add project” to add new project -&gt; provide project name as you like and hit Create Project.</li>
+        <li>Now you have to Register apps in this project. Click “Add app” -&gt; choose platform Android</li>
+        <li>Each app has its unique ID known as “Package name” or “ApplicationId”. For more info on how to name one visit https://developer.android.com/studio/build/application-id</li>
+        <li>Enter package name as asked on firebase console.</li>
+        <li>Set a nickname(optional, but we’ll add total of three apps so..)</li>
+        <li>Enter your app signing certificate(Optional but important in order to make features work like social login and otp verification. here is how to have one -&gt; https://developers.google.com/android/guides/client-auth)</li>
+        <li>Click Register app. Upon succesful registration of app you’ll be provided with your configuration file(google-services.json) for that app.</li>
+        <li>Go to Authentication under Developer section and enable google login and facebook login.</li>
+        <li>Go to Database under Developer section and initiate real time database for chatting</li>
+        <li>Go to storage under Developer section  and enable that for media uploading</li>
+        <li>Lastly go to Dynamic links under Grow section and create app link for sharing</li>
+      </ul>
+    </li>
+    <li>
+      <h3 id="setup-onesignal">Setup Onesignal</h3>
+      <ul>
+        <li>Go to https://onesignal.com/ signup and create an app</li>
+        <li>Add server key and sernder id from firebase console(Cloud messaging under project settings)</li>
+        <li>You’ll get onesignal project id</li>
+      </ul>
+    </li>
+    <li>
+      <h3 id="downloadsetup-java-and-android-studio">Download/Setup Java and Android Studio</h3>
+      <ul>
+        <li>Download Java here: https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html</li>
+        <li>Download Android Studio here: https://developer.android.com/studio/
  Install and restart.</li>
-    </ul>
-  </li>
-  <li>
-    <h3 id="verify-installation">Verify installation</h3>
-    <ul>
-      <li>Easy steps: https://www.java.com/en/download/help/path.xml</li>
-    </ul>
-  </li>
-  <li>
-    <h3 id="running-project">Running project</h3>
-    <ul>
-      <li>Add configuration files(google-services.json) aquired from step 1 into respective project’s app folder.</li>
-      <li>Open Android studio -&gt; Click on “Open an existing Android Studio project” to navigate and select project.</li>
-      <li>Open and edit app level build.gradle file (app/build.gradle)</li>
-      <li>Fill out fields in defaultConfig
+      </ul>
+    </li>
+    <li>
+      <h3 id="verify-installation">Verify installation</h3>
+      <ul>
+        <li>Easy steps: https://www.java.com/en/download/help/path.xml</li>
+      </ul>
+    </li>
+    <li>
+      <h3 id="running-project">Running project</h3>
+      <ul>
+        <li>Add configuration files(google-services.json) aquired from step 1 into respective project’s app folder.</li>
+        <li>Open Android studio -&gt; Click on “Open an existing Android Studio project” to navigate and select project.</li>
+        <li>Open and edit app level build.gradle file (app/build.gradle)</li>
+        <li>Fill out fields in defaultConfig
   applicationId - your app package name from firebase console
   app_name - your app name
   web_client_id - copy it from firebase console for google login
   facebook_app_id and fb_login_protocol_scheme as filled in firebsae console
   dynamic_link_domain - which you got from firebase console under Dynamic links</li>
-      <li>Finally modify onesignal_app_id with app id obtained from step 2 for notificaitons</li>
-      <li>Change application’s BASE_URL with your’s in file app/src/main/java/com/verbosetech/weshare/network/ApiUtils.java</li>
-      <li>Android studio will be asking you to Sync project files since build.gradle is modified. Hit “Sync now”</li>
-      <li>Done, now you can build apk from build section in navigation menu.</li>
-    </ul>
+        <li>Finally modify onesignal_app_id with app id obtained from step 2 for notificaitons</li>
+        <li>Change application’s BASE_URL with your’s in file app/src/main/java/com/verbosetech/weshare/network/ApiUtils.java</li>
+        <li>Android studio will be asking you to Sync project files since build.gradle is modified. Hit “Sync now”</li>
+        <li>Done, now you can build apk from build section in navigation menu.</li>
+      </ul>
 
-    <p>note: If you are using AdMob make sure you uncomment line numbers 30-32 in AndroidManifest.xml</p>
-  </li>
-</ol>
+      <p>note: If you are using AdMob make sure you uncomment line numbers 30-32 in AndroidManifest.xml</p>
+    </li>
+  </ol>
 
-<p><strong>Note: If you are unable to understand any topic or find any topic needs more elaboration. 
+  <p><strong>Note: If you are unable to understand any topic or find any topic needs more elaboration. 
 Please raise an issue ticket at this link <a href="https://opuslabs.freshdesk.com">https://opuslabs.freshdesk.com</a></strong></p>
+</div>
 
 
     <div class="tags">
@@ -492,141 +738,142 @@ Please raise an issue ticket at this link <a href="https://opuslabs.freshdesk.co
 
 </div>
 
-<hr class="shaded"/>
+
+
+                </div>
+                <!-- /.row -->
+            </div>           
+  <!-- /.container -->
+</div>
+<!-- /#main -->
+</div>
 
 <footer>
-            <div class="row">
-                <div class="col-lg-12 footer">
-               &copy;2019 Opus Labs. All rights reserved. <br />
- Site last generated: Nov 18, 2019 <br />
-<p><img src="images/company_logo_dark.png" alt="Company logo"/></p>
-                </div>
-            </div>
+  <div class="oval-wrap"><div class="bg-oval"><img src="images/bgoval-dark.svg"></div></div>
+  <div class="row">
+    <div class="col-lg-12 footer" style="text-align: center;">
+     &copy;2019 Opus Labs. All rights reserved. <br />
+      Site last generated: Nov 22, 2019 <br />
+     <p style="margin-top: 20px"><img src="images/company_logo.png" alt="Company logo"/></p>
+   </div>
+ </div>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" crossorigin="anonymous"></script>
 <script type="text/javascript">
 	/* ---- particles.js config ---- */
 
-particlesJS("particles-js", {
-  "particles": {
-    "number": {
-      "value": 120,
-      "density": {
-        "enable": false,
-        "value_area": 800
-      }
-    },
-    "color": {
-      "value": "#ffffff"
-    },
-    "shape": {
-      "type": "circle",
-      "stroke": {
-        "width": 0,
-        "color": "#000000"
-      },
-      "polygon": {
-        "nb_sides": 5
-      },
-      "image": {
-        "src": "img/github.svg",
-        "width": 100,
-        "height": 100
-      }
-    },
-    "opacity": {
-      "value": 0.5,
-      "random": false,
-      "anim": {
-        "enable": false,
-        "speed": 1,
-        "opacity_min": 0.1,
-        "sync": false
-      }
-    },
-    "size": {
-      "value": 3,
-      "random": true,
-      "anim": {
-        "enable": false,
-        "speed": 40,
-        "size_min": 0.1,
-        "sync": false
-      }
-    },
-    "line_linked": {
-      "enable": true,
-      "distance": 150,
-      "color": "#ffffff",
-      "opacity": 0.4,
-      "width": 1
-    },
-    "move": {
-      "enable": true,
-      "speed": 4,
-      "direction": "none",
-      "random": true,
-      "straight": false,
-      "out_mode": "out",
-      "bounce": true,
-      "attract": {
-        "enable": false,
-        "rotateX": 600,
-        "rotateY": 1200
-      }
-    }
-  },
-  "interactivity": {
-    "detect_on": "canvas",
-    "events": {
-      "onhover": {
-        "enable": true,
-        "mode": "grab"
-      },
-      "onclick": {
-        "enable": true,
-        "mode": "push"
-      },
-      "resize": true
-    },
-    "modes": {
-      "grab": {
-        "distance": 140,
-        "line_linked": {
-          "opacity": 1
+  particlesJS("particles-js", {
+    "particles": {
+      "number": {
+        "value": 120,
+        "density": {
+          "enable": false,
+          "value_area": 800
         }
       },
-      "bubble": {
-        "distance": 400,
-        "size": 40,
-        "duration": 2,
-        "opacity": 8,
-        "speed": 3
+      "color": {
+        "value": "#ffffff"
       },
-      "repulse": {
-        "distance": 200,
-        "duration": 0.4
+      "shape": {
+        "type": "circle",
+        "stroke": {
+          "width": 0,
+          "color": "#000000"
+        },
+        "polygon": {
+          "nb_sides": 5
+        },
+        "image": {
+          "src": "img/github.svg",
+          "width": 100,
+          "height": 100
+        }
       },
-      "push": {
-        "particles_nb": 4
+      "opacity": {
+        "value": 0.5,
+        "random": false,
+        "anim": {
+          "enable": false,
+          "speed": 1,
+          "opacity_min": 0.1,
+          "sync": false
+        }
       },
-      "remove": {
-        "particles_nb": 2
+      "size": {
+        "value": 3,
+        "random": true,
+        "anim": {
+          "enable": false,
+          "speed": 40,
+          "size_min": 0.1,
+          "sync": false
+        }
+      },
+      "line_linked": {
+        "enable": true,
+        "distance": 150,
+        "color": "#ffffff",
+        "opacity": 0.4,
+        "width": 1
+      },
+      "move": {
+        "enable": true,
+        "speed": 4,
+        "direction": "none",
+        "random": true,
+        "straight": false,
+        "out_mode": "out",
+        "bounce": true,
+        "attract": {
+          "enable": false,
+          "rotateX": 600,
+          "rotateY": 1200
+        }
       }
-    }
-  },
-  "retina_detect": true
-});
+    },
+    "interactivity": {
+      "detect_on": "canvas",
+      "events": {
+        "onhover": {
+          "enable": true,
+          "mode": "grab"
+        },
+        "onclick": {
+          "enable": true,
+          "mode": "push"
+        },
+        "resize": true
+      },
+      "modes": {
+        "grab": {
+          "distance": 140,
+          "line_linked": {
+            "opacity": 1
+          }
+        },
+        "bubble": {
+          "distance": 400,
+          "size": 40,
+          "duration": 2,
+          "opacity": 8,
+          "speed": 3
+        },
+        "repulse": {
+          "distance": 200,
+          "duration": 0.4
+        },
+        "push": {
+          "particles_nb": 4
+        },
+        "remove": {
+          "particles_nb": 2
+        }
+      }
+    },
+    "retina_detect": true
+  });
 </script>
-
-                </div>
-                <!-- /.row -->
-            </div>
-            <!-- /.container -->
-        </div>
-        <!-- /#main -->
-    </div>
 
 </body>
 
