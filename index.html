@@ -561,7 +561,7 @@ This guide assumes you have some experience in setting up PHP based web applicat
       <h3 id="deploying-backend">Deploying Backend</h3>
       <p>Follow these steps:</p>
       <ul>
-        <li>Extract the <code class="highlighter-rouge">weshare.zip</code> on your server</li>
+        <li>Extract the <code class="language-plaintext highlighter-rouge">weshare.zip</code> on your server</li>
         <li>For example if your domain is http://weshare.com then you will be able to access the backend as http://weshare.com/weshare/public</li>
       </ul>
     </li>
@@ -589,7 +589,7 @@ This guide assumes you have some experience in setting up PHP based web applicat
     </li>
     <li><strong>Firebase related -  Very Important</strong>:
       <ul>
-        <li>FIREBASE_ISS: Required to succefully login through FB/Google, Value: <code class="highlighter-rouge">https://securetoken.google.com/&lt;firebase-project-id&gt;</code>. If not setup properly authentication in your app will not work properly.</li>
+        <li>FIREBASE_ISS: Required to succefully login through FB/Google, Value: <code class="language-plaintext highlighter-rouge">https://securetoken.google.com/&lt;firebase-project-id&gt;</code>. If not setup properly authentication in your app will not work properly.</li>
       </ul>
     </li>
     <li><strong>Push Notification related</strong>:
@@ -619,18 +619,18 @@ If you are integrating with mailgun, you can simply set following values in .env
       <h3 id="admin-panel">Admin Panel</h3>
       <p>Admin panel is developed in Angular 7 and shipped in seperate folder. You will need to update app title and base url.</p>
       <ul>
-        <li>Open <code class="highlighter-rouge">weshare-admin.zip</code>, it’s an Angualr 7 based project, nodejs version 8 or above is required</li>
-        <li>Run <code class="highlighter-rouge">npm install</code> command if this your first time</li>
+        <li>Open <code class="language-plaintext highlighter-rouge">weshare-admin.zip</code>, it’s an Angualr 7 based project, nodejs version 8 or above is required</li>
+        <li>Run <code class="language-plaintext highlighter-rouge">npm install</code> command if this your first time</li>
         <li>If you are not familiar with Angular 7 we will suggest you to get basic idea from <a href="https://angular.io/guide/quickstart">https://angular.io/guide/quickstart</a></li>
-        <li>In <code class="highlighter-rouge">src/app/@core/models/constants.model.ts</code> update value of <code class="highlighter-rouge">API_BASE_URL</code> and <code class="highlighter-rouge">APP_NAME</code>  variables</li>
-        <li>After making the required changes issue a command <code class="highlighter-rouge">ng build --prod</code></li>
-        <li>Now angular would have created/updated the <code class="highlighter-rouge">dist</code> folder in root with updated compiled files</li>
-        <li>You need to copy all the files in <code class="highlighter-rouge">dist</code> folder to you Laravel’s <code class="highlighter-rouge">public/admin</code> folder.</li>
-        <li>For example <code class="highlighter-rouge">cp -r weshare-angular/dist/* weshare/public/admin/</code> assuming <code class="highlighter-rouge">weshare-angular</code> is your angular project folder and <code class="highlighter-rouge">weshare</code> is your laravel project folder</li>
+        <li>In <code class="language-plaintext highlighter-rouge">src/app/@core/models/constants.model.ts</code> update value of <code class="language-plaintext highlighter-rouge">API_BASE_URL</code> and <code class="language-plaintext highlighter-rouge">APP_NAME</code>  variables</li>
+        <li>After making the required changes issue a command <code class="language-plaintext highlighter-rouge">ng build --prod</code></li>
+        <li>Now angular would have created/updated the <code class="language-plaintext highlighter-rouge">dist</code> folder in root with updated compiled files</li>
+        <li>You need to copy all the files in <code class="language-plaintext highlighter-rouge">dist</code> folder to you Laravel’s <code class="language-plaintext highlighter-rouge">public/admin</code> folder.</li>
+        <li>For example <code class="language-plaintext highlighter-rouge">cp -r weshare-angular/dist/* weshare/public/admin/</code> assuming <code class="language-plaintext highlighter-rouge">weshare-angular</code> is your angular project folder and <code class="language-plaintext highlighter-rouge">weshare</code> is your laravel project folder</li>
         <li>There is also a quicker way to configure admin panel, if you do not want to do the compilation of angular project you can follow these steps but since it requires editing a non formatted js file some users might find it bit confusing or hard</li>
-        <li>Open <code class="highlighter-rouge">public/admin/main.&lt;some-random-code&gt;.js</code> file in any editor of your choice</li>
-        <li>Update Base Url - Search for <code class="highlighter-rouge">http://opuslabs.in:9083/api/admin</code> and replace it with your backend url for example <code class="highlighter-rouge">http://weshare.com/weshare/public/api/admin</code></li>
-        <li>Update Project Title - Search for <code class="highlighter-rouge">Weshare</code> and replace it with your project title</li>
+        <li>Open <code class="language-plaintext highlighter-rouge">public/admin/main.&lt;some-random-code&gt;.js</code> file in any editor of your choice</li>
+        <li>Update Base Url - Search for <code class="language-plaintext highlighter-rouge">http://opuslabs.in:9083/api/admin</code> and replace it with your backend url for example <code class="language-plaintext highlighter-rouge">http://weshare.com/weshare/public/api/admin</code></li>
+        <li>Update Project Title - Search for <code class="language-plaintext highlighter-rouge">Weshare</code> and replace it with your project title</li>
         <li>This is a just a quicker way to make ready your admin panel so that you do not have to compile whole angular project, if you are unable to configure admin panel this way, kindly fallback to steps mentioned previously that requires compilation of angular project</li>
       </ul>
     </li>
