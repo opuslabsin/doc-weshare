@@ -18,6 +18,7 @@
 <link rel="stylesheet" href="css/boxshadowproperties.css">
 <!-- most color styles are extracted out to here -->
 <link rel="stylesheet" href="css/theme-blue.css">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 
@@ -44,370 +45,389 @@
 <link rel="alternate" type="application/rss+xml" title="documentation-weshare" href="opuslabsin.github.io/feed.xml">
 
 <style type="text/css">
+    body {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 18px;
+    }    
 	.home {
-	width: 100%;
-    height: 700px;
-    background: -moz-linear-gradient(to bottom,#5789B4 0,#2171B6 52%);
-    background: -webkit-linear-gradient(to bottom,#5789B4 0,#2171B6 52%);
-    background: linear-gradient(to bottom,#5789B4 0,#2171B6 52%);
-}
-.jumbo {
-	border-radius: initial;
-    margin-bottom: auto;
-    z-index: 2;
-    position: absolute;
-    left: 0;
-    top: 260px;
-    right: 0;
-}
-#home-title {
-    font-size: 2.9em;
-    text-align: center;
-    color: #fff;
-    font-family: times, arial !important;
-    font-weight: 600;
-}
+    	width: 100%;
+        height: 700px;
+        background: -moz-linear-gradient(to bottom,#5789B4 0,#2171B6 52%);
+        background: -webkit-linear-gradient(to bottom,#5789B4 0,#2171B6 52%);
+        background: linear-gradient(to bottom,#5789B4 0,#2171B6 52%);
+    }
+    .jumbo {
+    	border-radius: initial;
+        margin-bottom: auto;
+        z-index: 2;
+        position: absolute;
+        left: 0;
+        top: 260px;
+        right: 0;
+    }
+    #home-title {
+        font-size: 2.9em;
+        text-align: center;
+        color: #fff;
+        font-family: times, arial !important;
+        font-weight: 600;
+    }
 
-#home-title-txt {
-    font-size: 22px;
-    text-align: center;
-    color: #fff;
-    font-family: open-sans, Tahoma, Verdana, sans-serif !important;
-}
+    #home-title-txt {
+        font-size: 22px;
+        text-align: center;
+        color: #fff;
+        font-family: open-sans, Tahoma, Verdana, sans-serif !important;
+    }
 
-#scroll-down {
-    position: absolute;
-    left: 50%;
-    top: 350%;
-    z-index: 1;
-}
+    #scroll-down {
+        position: absolute;
+        left: 50%;
+        top: 350%;
+        z-index: 1;
+    }
 
-#particles-js {
-  position: absolute;
-  width: 100%;
-  height: 700px;
-  background-color: transparent;  
-}
+    #particles-js {
+      position: absolute;
+      width: 100%;
+      height: 700px;
+      background-color: transparent;  
+    }
 
-.post-content {
-	padding-top: 100px;
-}
+    .post-content {
+    	padding-top: 100px;
+    }
 
-div#toc >ul::before {
-	font-size: 24px;
-}
+    div#toc >ul::before {
+    	font-size: 24px;
+    }
 
-.down-scroll a {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    z-index: 2;
-    display: inline-block;
-    -webkit-transform: translate(0,-50%);
-    transform: translate(0,-50%);
-    color: #fff;
-    font: 400 20px / 1 'Josefin Sans', sans-serif;
-    letter-spacing: .1em;
-    text-decoration: none;
-    transition: opacity .3s;
-    transition-duration: .5s;
-    transition-property: all;
-    transition-timing-function: ease-in-out;
-}
+    .down-scroll a {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        z-index: 2;
+        display: inline-block;
+        -webkit-transform: translate(0,-50%);
+        transform: translate(0,-50%);
+        color: #fff;
+        font: 400 20px / 1 'Josefin Sans', sans-serif;
+        letter-spacing: .1em;
+        text-decoration: none;
+        transition: opacity .3s;
+        transition-duration: .5s;
+        transition-property: all;
+        transition-timing-function: ease-in-out;
+    }
 
-#scroll-down a span
-{
-	position: absolute;
-	top: 0;
-	left: 50%;
-	width: 45px;
-	height: 45px;
-	margin-left: -23px;
-	border: 1px solid #fff;
-	border-radius: 100%;
-	box-sizing: border-box;
-}
+    #scroll-down a span
+    {
+    	position: absolute;
+    	top: 0;
+    	left: 50%;
+    	width: 45px;
+    	height: 45px;
+    	margin-left: -23px;
+    	border: 1px solid #fff;
+    	border-radius: 100%;
+    	box-sizing: border-box;
+    }
 
-#scroll-down a span::after
-{
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	content: '';
-	width: 16px;
-	height: 16px;
-	margin: -12px 0 0 -8px;
-	border-left: 1px solid #fff;
-	border-bottom: 1px solid #fff;
-	-webkit-transform: rotate(-45deg);
-	transform: rotate(-45deg);
-	box-sizing: border-box;
-}
+    #scroll-down a span::after
+    {
+    	position: absolute;
+    	top: 50%;
+    	left: 50%;
+    	content: '';
+    	width: 16px;
+    	height: 16px;
+    	margin: -12px 0 0 -8px;
+    	border-left: 1px solid #fff;
+    	border-bottom: 1px solid #fff;
+    	-webkit-transform: rotate(-45deg);
+    	transform: rotate(-45deg);
+    	box-sizing: border-box;
+    }
 
-#scroll-down a span::before
-{
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: -1;
-	content: '';
-	width: 44px;
-	height: 44px;
-	box-shadow: 0 0 0 0 rgba(255,255,255,.1);
-	border-radius: 100%;
-	opacity: 0;
-	-webkit-animation: 3s infinite sdb03;
-	animation: 3s infinite sdb03;
-	box-sizing: border-box;
-}
+    #scroll-down a span::before
+    {
+    	position: absolute;
+    	top: 0;
+    	left: 0;
+    	z-index: -1;
+    	content: '';
+    	width: 44px;
+    	height: 44px;
+    	box-shadow: 0 0 0 0 rgba(255,255,255,.1);
+    	border-radius: 100%;
+    	opacity: 0;
+    	-webkit-animation: 3s infinite sdb03;
+    	animation: 3s infinite sdb03;
+    	box-sizing: border-box;
+    }
 
-.down-scroll a:hover
-{
-	transition: all 1s ease;
-	-webkit-transition: 1s ease-out;
-	-moz-transition: 1s ease-out;
-	-o-transition: 1s ease-out;
-	opacity: .5;
-	transition: all 1s ease;
-	bottom: 1%;
-	color: #fff;
-	-webkit-transition: 1s ease-out;
-	-moz-transition: 1s ease-out;
-	-o-transition: 1s ease-out;
-	opacity: .5;
-}
+    .down-scroll a:hover
+    {
+    	transition: all 1s ease;
+    	-webkit-transition: 1s ease-out;
+    	-moz-transition: 1s ease-out;
+    	-o-transition: 1s ease-out;
+    	opacity: .5;
+    	transition: all 1s ease;
+    	bottom: 1%;
+    	color: #fff;
+    	-webkit-transition: 1s ease-out;
+    	-moz-transition: 1s ease-out;
+    	-o-transition: 1s ease-out;
+    	opacity: .5;
+    }
 
-.container-fluid {
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-}
+    .container-fluid {
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }
 
-.nav div.logo {
-    float: left;
-    width: auto;
-    height: auto;
-    padding-left: 3rem;
-}
+    .nav div.logo {
+        float: left;
+        width: auto;
+        height: auto;
+        padding-left: 3rem;
+    }
 
-.nav {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    padding-left: 0;
-    margin-bottom: 0;
-    list-style: none;
-    width: 100%;
-    height: 65px;
-    position: absolute;
-    line-height: 40px;
-    text-align: center;
-    padding-top: 30px;
-    padding-bottom: 20px;
-    -webkit-transition: all .4s ease;
-    transition: all .4s ease;
-    z-index: 9999 !important;
-}
+    .nav {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        padding-left: 0;
+        margin-bottom: 0;
+        list-style: none;
+        width: 100%;
+        height: 65px;
+        position: absolute;
+        line-height: 40px;
+        text-align: center;
+        padding-top: 30px;
+        padding-bottom: 20px;
+        -webkit-transition: all .4s ease;
+        transition: all .4s ease;
+        z-index: 9999 !important;
+    }
 
-footer {
-    color: #fff;
-    background-color: #2171B6;
-    padding-top: 137px;
-    padding-bottom: 40px;    
-    position: relative;
-    width: 100%;
-    z-index: 1;
-    overflow: hidden;
-    padding-left: 50px;
-    padding-right: 50px;
-    margin: 0;
-}
+    footer {
+        color: #fff;
+        background-color: #2171B6;
+        padding-top: 137px;
+        padding-bottom: 40px;    
+        position: relative;
+        width: 100%;
+        z-index: 1;
+        overflow: hidden;
+        padding-left: 50px;
+        padding-right: 50px;
+        margin: 0;
+    }
 
-.oval-wrap {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 232px;
-    background-color: #fff;
-    overflow: hidden;
-}
+    .oval-wrap {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 232px;
+        background-color: #fff;
+        overflow: hidden;
+    }
 
-.bg-oval {
-    position: absolute;
-    left: 50%;
-    top: 0;
-    transform: translateX(-50%);
-    min-width: 2424px;
-    height: 866px;
-}
-.bg-oval img {
-    width: 100%;
-    height: 100%;
-    display: block;
-}
+    .bg-oval {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+        min-width: 2424px;
+        height: 866px;
+    }
+    .bg-oval img {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
 
-#footer-cta {
-    overflow: visible;
-    text-align: center;
-    padding-top: 438px;
-    padding-bottom: 19px;
-    position: relative;
-    width: 100%;
-    z-index: 1;
-    overflow: hidden;
-    padding-left: 50px;
-    padding-right: 50px;
-}
-#footer-cta .bg-wrap {
-    height: 460px;
-}
-.bg-wrap {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    overflow: hidden;
-}
+    #footer-cta {
+        overflow: visible;
+        text-align: center;
+        padding-top: 438px;
+        padding-bottom: 19px;
+        position: relative;
+        width: 100%;
+        z-index: 1;
+        overflow: hidden;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    #footer-cta .bg-wrap {
+        height: 460px;
+    }
+    .bg-wrap {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        overflow: hidden;
+    }
 
-#footer-cta .background {
-    width: 605px;
-    margin-left: -302px;
-}
-.background.cn {
-    left: 50%;
-    width: 1800px;
-    margin-left: -900px;
-}
-.basic-scaler {
-    transform-origin: center top;
-}
-.background {
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 0;
-}
-#footer-cta.on .blob {
-    -webkit-animation: floatY infinite 10s ease-in-out;
-    -moz-animation: floatY infinite 10s ease-in-out;
-    animation: floatY infinite 10s ease-in-out;
-    animation-fill-mode: forwards;
-    animation-duration: 8s;
-}
-#footer-cta .blob[data-num="1"] {
-    width: 150px;
-    left: 50px;
-    top: 242px;
-}
-.part {
-    position: absolute;
-    left: 40px;
-    top: 0;
-}
-#footer-cta .background .main {
-    width: 505px;
-}
+    #footer-cta .background {
+        width: 605px;
+        margin-left: -302px;
+    }
+    .background.cn {
+        left: 50%;
+        width: 1800px;
+        margin-left: -900px;
+    }
+    .basic-scaler {
+        transform-origin: center top;
+    }
+    .background {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 0;
+    }
+    #footer-cta.on .blob {
+        -webkit-animation: floatY infinite 10s ease-in-out;
+        -moz-animation: floatY infinite 10s ease-in-out;
+        animation: floatY infinite 10s ease-in-out;
+        animation-fill-mode: forwards;
+        animation-duration: 8s;
+    }
+    #footer-cta .blob[data-num="1"] {
+        width: 150px;
+        left: 50px;
+        top: 242px;
+    }
+    .part {
+        position: absolute;
+        left: 40px;
+        top: 0;
+    }
+    #footer-cta .background .main {
+        width: 505px;
+    }
 
-.part img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
+    .part img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
 
-#footer-cta.on .blob[data-num="2"] {
-    animation-delay: -5s;
-}
-#footer-cta.on .blob {
-    -webkit-animation: floatY infinite 10s ease-in-out;
-    -moz-animation: floatY infinite 10s ease-in-out;
-    animation: floatY infinite 10s ease-in-out;
-    animation-fill-mode: forwards;
-    animation-duration: 8s;
-}
-#footer-cta .blob[data-num="2"] {
-    width: 130px;
-    left: 410px;
-    top: 65px;
-}
+    #footer-cta.on .blob[data-num="2"] {
+        animation-delay: -5s;
+    }
+    #footer-cta.on .blob {
+        -webkit-animation: floatY infinite 10s ease-in-out;
+        -moz-animation: floatY infinite 10s ease-in-out;
+        animation: floatY infinite 10s ease-in-out;
+        animation-fill-mode: forwards;
+        animation-duration: 8s;
+    }
+    #footer-cta .blob[data-num="2"] {
+        width: 130px;
+        left: 410px;
+        top: 65px;
+    }
 
-#footer-cta.on .blob[data-num="2"] img {
-    animation-delay: -4s;
-}
-#footer-cta.on .blob img {
-    -webkit-animation: aboutWheelSpin infinite 15s linear;
-    -moz-animation: aboutWheelSpin infinite 15s linear;
-    animation: aboutWheelSpin infinite 15s linear;
-    animation-fill-mode: forwards;
-    animation-duration: 8s;
-}
+    #footer-cta.on .blob[data-num="2"] img {
+        animation-delay: -4s;
+    }
+    #footer-cta.on .blob img {
+        -webkit-animation: aboutWheelSpin infinite 15s linear;
+        -moz-animation: aboutWheelSpin infinite 15s linear;
+        animation: aboutWheelSpin infinite 15s linear;
+        animation-fill-mode: forwards;
+        animation-duration: 8s;
+    }
 
-#footer-cta .man {
-    width: 140px;
-    left: 355px;
-    top: 120px;
-}
+    #footer-cta .man {
+        width: 140px;
+        left: 355px;
+        top: 120px;
+    }
 
-.documentation {
-    padding-bottom: 100px;
-    position: relative;
-    z-index: 1;
-    overflow: hidden;
-    padding-left: 50px;
-    padding-right: 50px;
-}
+    .documentation {
+        padding-bottom: 100px;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
 
-.section-col {
-    margin-top: 150px;
-}
+    .section-col {
+        /*margin-top: 150px;*/
+    }
 
-.section-title, #introduction {
-    font-size: 33px;
-    line-height: 1.55;    
-    margin-bottom: 20px;
-    color: #2171B6;
-    font-family: times, arial;
-}
+    .section-title, #introduction {
+        font-size: 33px;
+        line-height: 1.55;    
+        margin-bottom: 20px;
+        color: #2171B6;
+        font-family: times, arial;
+    }
 
-@-webkit-keyframes sdb03{0%,100%{opacity:0}30%{opacity:1}60%{box-shadow:0 0 0 60px rgba(255,255,255,.1);opacity:0}} 
+    .letter {
+      display: inline-block;
+      line-height: 1em;
+    }
 
-@keyframes sdb03{0%,100%{opacity:0}30%{opacity:1}60%{box-shadow:0 0 0 60px rgba(255,255,255,.1);opacity:0}} 
+    .seperator {
+        padding: 100px 0;
+    }
 
-@keyframes floatY {
-  0% {
-    transform: translateY(-20px);
-  }
-  50% {
-    transform: translateY(20px);
-  }
-  100% {
-    transform: translateY(-20px);
-  }
-}
-.float-y {
-  -webkit-animation: floatY infinite 10s ease-in-out;
-  -moz-animation: floatY infinite 10s ease-in-out;
-  animation: floatY infinite 10s ease-in-out;
-  animation-fill-mode: forwards;
-}
+    @media screen and (min-width: 992px) {
+        .section-col {
+            margin-top: 80px;
+        }
+    }
 
-@keyframes aboutWheelSpin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-.about-wheelspin {
-  -webkit-animation: aboutWheelSpin infinite 15s linear;
-  -moz-animation: aboutWheelSpin infinite 15s linear;
-  animation: aboutWheelSpin infinite 15s linear;
-  animation-fill-mode: forwards;
-}
+    @-webkit-keyframes sdb03{0%,100%{opacity:0}30%{opacity:1}60%{box-shadow:0 0 0 60px rgba(255,255,255,.1);opacity:0}} 
+
+    @keyframes sdb03{0%,100%{opacity:0}30%{opacity:1}60%{box-shadow:0 0 0 60px rgba(255,255,255,.1);opacity:0}} 
+
+    @keyframes floatY {
+      0% {
+        transform: translateY(-20px);
+      }
+      50% {
+        transform: translateY(20px);
+      }
+      100% {
+        transform: translateY(-20px);
+      }
+    }
+    .float-y {
+      -webkit-animation: floatY infinite 10s ease-in-out;
+      -moz-animation: floatY infinite 10s ease-in-out;
+      animation: floatY infinite 10s ease-in-out;
+      animation-fill-mode: forwards;
+    }
+
+    @keyframes aboutWheelSpin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+    .about-wheelspin {
+      -webkit-animation: aboutWheelSpin infinite 15s linear;
+      -moz-animation: aboutWheelSpin infinite 15s linear;
+      animation: aboutWheelSpin infinite 15s linear;
+      animation-fill-mode: forwards;
+    }
 
 </style>
 
@@ -477,7 +497,7 @@ footer {
                 <div class="container ">
                     <div class="row">
                         <div class="col-lg-12">
-                            <p id="home-title">Weshare Installation Documentation</p>
+                            <p id="home-title"><span class="letter">Weshare Installation Documentation</span></p>
                             <p id="home-title-txt">Technical information to help you setup server and mobile application of Weshare - Social Media App.</p>
                         </div>                        
                         <section id="scroll-down" class="down-scroll"><a href="#introduction"><span class="mx-auto"></span></a>
@@ -513,12 +533,19 @@ footer {
   <div>
   <h1 id="introduction">Introduction</h1>
   <p>The app is connected with Laravel 5.5 based CMS using REST APIs, the following documentation will guide you through the process to connect the app with your backend.
-This guide assumes you have some experience in setting up PHP based web applications and <a href="https://laravel.com/docs/5.5/">Laravel Framework 5.5</a>.</p>
+This guide assumes you have some experience in setting up PHP based web applications and <a href="https://laravel.com/docs/5.5/">Laravel Framework 5.5</a>. Our mobile app supports Android platform, please ensure you have Android setup on your machine before following this tutorial, if you are new, please follow <a href="https://developer.android.com/">Android Developer Guide</a></p>
 </div>
 
-<div class="row" style="padding-top: 100px">
+<div class="row">
+  <div class="col-sm-4 col-sm-offset-4 seperator">
+    <img src="images/horizontal-line.svg" width="282" height="6" />
+  </div>
+</div>
+
+<div class="row">
   <div class="col-md-6 section-col">
-    <h2 class="section-title">Instructions for setting up server</h2>
+    <h2 id="server-title" class="section-title">Instructions for setting up server</h2>
+    <p>Following section explains how to setup our Laravel based code on server and configure it properly</p>
   </div>
   <div class="col-md-6">
     <section id="footer-cta" class="hasAnim on" data-offset="100">
@@ -619,6 +646,9 @@ If you are integrating with mailgun, you can simply set following values in .env
       <h3 id="admin-panel">Admin Panel</h3>
       <p>Admin panel is developed in Angular 7 and shipped in seperate folder. You will need to update app title and base url.</p>
       <ul>
+        <li>Open <code class="language-plaintext highlighter-rouge">public/admin/assets/appConfig.json</code></li>
+        <li>Update value of <code class="language-plaintext highlighter-rouge">appName</code> and <code class="language-plaintext highlighter-rouge">apiBaseUrl</code></li>
+        <li>If you need to make any changes in admin other than this, follow next steps</li>
         <li>Open <code class="language-plaintext highlighter-rouge">weshare-admin.zip</code>, it’s an Angualr 7 based project, nodejs version 8 or above is required</li>
         <li>Run <code class="language-plaintext highlighter-rouge">npm install</code> command if this your first time</li>
         <li>If you are not familiar with Angular 7 we will suggest you to get basic idea from <a href="https://angular.io/guide/quickstart">https://angular.io/guide/quickstart</a></li>
@@ -627,18 +657,20 @@ If you are integrating with mailgun, you can simply set following values in .env
         <li>Now angular would have created/updated the <code class="language-plaintext highlighter-rouge">dist</code> folder in root with updated compiled files</li>
         <li>You need to copy all the files in <code class="language-plaintext highlighter-rouge">dist</code> folder to you Laravel’s <code class="language-plaintext highlighter-rouge">public/admin</code> folder.</li>
         <li>For example <code class="language-plaintext highlighter-rouge">cp -r weshare-angular/dist/* weshare/public/admin/</code> assuming <code class="language-plaintext highlighter-rouge">weshare-angular</code> is your angular project folder and <code class="language-plaintext highlighter-rouge">weshare</code> is your laravel project folder</li>
-        <li>There is also a quicker way to configure admin panel, if you do not want to do the compilation of angular project you can follow these steps but since it requires editing a non formatted js file some users might find it bit confusing or hard</li>
-        <li>Open <code class="language-plaintext highlighter-rouge">public/admin/main.&lt;some-random-code&gt;.js</code> file in any editor of your choice</li>
-        <li>Update Base Url - Search for <code class="language-plaintext highlighter-rouge">http://opuslabs.in:9083/api/admin</code> and replace it with your backend url for example <code class="language-plaintext highlighter-rouge">http://weshare.com/weshare/public/api/admin</code></li>
-        <li>Update Project Title - Search for <code class="language-plaintext highlighter-rouge">Weshare</code> and replace it with your project title</li>
-        <li>This is a just a quicker way to make ready your admin panel so that you do not have to compile whole angular project, if you are unable to configure admin panel this way, kindly fallback to steps mentioned previously that requires compilation of angular project</li>
       </ul>
     </li>
   </ol>
 </div>
-<div class="row" style="padding-top: 100px">
+
+<div class="row">
+  <div class="col-sm-4 col-sm-offset-4 seperator">
+    <img src="images/horizontal-line.svg" width="282" height="6" />
+  </div>
+</div>
+
+<div class="row">
   <div class="col-md-6 section-col">
-    <h2 class="section-title">Instructions for building android mobile app</h2>
+    <h2 id="mobile-title" class="section-title">Instructions for building android mobile app</h2>
   </div>
   <div class="col-md-6">
     <section id="footer-cta" class="hasAnim on" data-offset="100">
@@ -666,56 +698,56 @@ If you are integrating with mailgun, you can simply set following values in .env
     <li>
       <h3 id="setup-firebase-and-api-keys">Setup Firebase and Api keys</h3>
       <ul>
-        <li>Login to http://console.firebase.google.com</li>
-        <li>Click on “Add project” to add new project -&gt; provide project name as you like and hit Create Project.</li>
-        <li>Now you have to Register apps in this project. Click “Add app” -&gt; choose platform Android</li>
-        <li>Each app has its unique ID known as “Package name” or “ApplicationId”. For more info on how to name one visit https://developer.android.com/studio/build/application-id</li>
-        <li>Enter package name as asked on firebase console.</li>
-        <li>Set a nickname(optional, but we’ll add total of three apps so..)</li>
-        <li>Enter your app signing certificate(Optional but important in order to make features work like social login and otp verification. here is how to have one -&gt; https://developers.google.com/android/guides/client-auth)</li>
+        <li>Login to <a href="http://console.firebase.google.com">http://console.firebase.google.com</a></li>
+        <li>Click on <code class="language-plaintext highlighter-rouge">Add project</code> to add new project -&gt; provide project name as you like and click on Create Project.</li>
+        <li>Now you have to Register apps in this project. Click <code class="language-plaintext highlighter-rouge">Add app</code> -&gt; <code class="language-plaintext highlighter-rouge">choose platform Android</code></li>
+        <li>Each app has its unique ID known as <code class="language-plaintext highlighter-rouge">Package name</code> or <code class="language-plaintext highlighter-rouge">ApplicationId</code>. For more info on how to name one visit https://developer.android.com/studio/build/application-id</li>
+        <li>Enter <code class="language-plaintext highlighter-rouge">package name</code> as asked on firebase console.</li>
+        <li>Set a <code class="language-plaintext highlighter-rouge">nickname</code></li>
+        <li>Enter your <code class="language-plaintext highlighter-rouge">app signing certificate</code>(Important in order to make features work like social login and otp verification. here is how to have one -&gt; https://developers.google.com/android/guides/client-auth)</li>
         <li>Click Register app. Upon succesful registration of app you’ll be provided with your configuration file(google-services.json) for that app.</li>
-        <li>Go to Authentication under Developer section and enable google login and facebook login.</li>
-        <li>Go to Database under Developer section and initiate real time database for chatting</li>
-        <li>Go to storage under Developer section  and enable that for media uploading</li>
-        <li>Lastly go to Dynamic links under Grow section and create app link for sharing</li>
+        <li>Go to <code class="language-plaintext highlighter-rouge">Authentication</code> under Developer section and enable google login and facebook login.</li>
+        <li>Go to <code class="language-plaintext highlighter-rouge">Database</code> under Developer section and initiate real time database for chatting</li>
+        <li>Go to <code class="language-plaintext highlighter-rouge">Storage</code> under Developer section  and enable that for media uploading</li>
+        <li>Lastly go to <code class="language-plaintext highlighter-rouge">Dynamic links</code> under Grow section and create app link for sharing</li>
       </ul>
     </li>
     <li>
       <h3 id="setup-onesignal">Setup Onesignal</h3>
       <ul>
-        <li>Go to https://onesignal.com/ signup and create an app</li>
-        <li>Add server key and sernder id from firebase console(Cloud messaging under project settings)</li>
-        <li>You’ll get onesignal project id</li>
+        <li>Go to <a href="https://onesignal.com/">https://onesignal.com/</a> signup and create an app</li>
+        <li>Add <code class="language-plaintext highlighter-rouge">server key</code> and <code class="language-plaintext highlighter-rouge">sender id</code> from firebase console(Cloud messaging under project settings)</li>
+        <li>You’ll get <code class="language-plaintext highlighter-rouge">onesignal app id</code></li>
       </ul>
     </li>
     <li>
       <h3 id="downloadsetup-java-and-android-studio">Download/Setup Java and Android Studio</h3>
       <ul>
-        <li>Download Java here: https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html</li>
-        <li>Download Android Studio here: https://developer.android.com/studio/
+        <li>Download Java here: <a href="https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html">https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html</a></li>
+        <li>Download Android Studio here: <a href="https://developer.android.com/studio/">https://developer.android.com/studio/</a>
  Install and restart.</li>
       </ul>
     </li>
     <li>
       <h3 id="verify-installation">Verify installation</h3>
       <ul>
-        <li>Easy steps: https://www.java.com/en/download/help/path.xml</li>
+        <li>Easy steps: <a href="https://www.java.com/en/download/help/path.xml">https://www.java.com/en/download/help/path.xml</a></li>
       </ul>
     </li>
     <li>
       <h3 id="running-project">Running project</h3>
       <ul>
-        <li>Add configuration files(google-services.json) aquired from step 1 into respective project’s app folder.</li>
-        <li>Open Android studio -&gt; Click on “Open an existing Android Studio project” to navigate and select project.</li>
-        <li>Open and edit app level build.gradle file (app/build.gradle)</li>
+        <li>Add configuration files(<code class="language-plaintext highlighter-rouge">google-services.json</code>) acquired in Step 1 above into respective project’s app folder.</li>
+        <li>Open <code class="language-plaintext highlighter-rouge">Android studio</code> -&gt; Click on <code class="language-plaintext highlighter-rouge">Open an existing Android Studio project</code> to navigate and select project.</li>
+        <li>Open and edit app level <code class="language-plaintext highlighter-rouge">build.gradle</code> file (app/build.gradle)</li>
         <li>Fill out fields in defaultConfig
-  applicationId - your app package name from firebase console
+  <code class="language-plaintext highlighter-rouge">applicationId</code> - your app package name from firebase console
   app_name - your app name
-  web_client_id - copy it from firebase console for google login
+  <code class="language-plaintext highlighter-rouge">web_client_id</code> - copy it from firebase console for google login
   facebook_app_id and fb_login_protocol_scheme as filled in firebsae console
-  dynamic_link_domain - which you got from firebase console under Dynamic links</li>
-        <li>Finally modify onesignal_app_id with app id obtained from step 2 for notificaitons</li>
-        <li>Change application’s BASE_URL with your’s in file app/src/main/java/com/verbosetech/weshare/network/ApiUtils.java</li>
+  <code class="language-plaintext highlighter-rouge">dynamic_link_domain</code> - which you got from firebase console under Dynamic links</li>
+        <li>Finally modify <code class="language-plaintext highlighter-rouge">onesignal_app_id</code> with app id obtained from Step 2 for notificaitons</li>
+        <li>Update application’s <code class="language-plaintext highlighter-rouge">BASE_URL</code> with your’s in file app/src/main/java/com/verbosetech/weshare/network/ApiUtils.java</li>
         <li>Android studio will be asking you to Sync project files since build.gradle is modified. Hit “Sync now”</li>
         <li>Done, now you can build apk from build section in navigation menu.</li>
       </ul>
@@ -753,20 +785,22 @@ Please raise an issue ticket at this link <a href="https://opuslabs.freshdesk.co
   <div class="row">
     <div class="col-lg-12 footer" style="text-align: center;">
      &copy;2019 Opus Labs. All rights reserved. <br />
-      Site last generated: Nov 22, 2019 <br />
+      Site last generated: Dec 7, 2019 <br />
      <p style="margin-top: 20px"><img src="images/company_logo.png" alt="Company logo"/></p>
    </div>
  </div>
 </footer>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js" integrity="sha256-BuxrUdr/4YoztQLxT6xmdO6hSQw2d6BtBUY1pteGds4=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" crossorigin="anonymous"></script>
+
 <script type="text/javascript">
 	/* ---- particles.js config ---- */
 
   particlesJS("particles-js", {
     "particles": {
       "number": {
-        "value": 120,
+        "value": 100,
         "density": {
           "enable": false,
           "value_area": 800
@@ -791,7 +825,7 @@ Please raise an issue ticket at this link <a href="https://opuslabs.freshdesk.co
         }
       },
       "opacity": {
-        "value": 0.5,
+        "value": 0.4,
         "random": false,
         "anim": {
           "enable": false,
@@ -819,7 +853,7 @@ Please raise an issue ticket at this link <a href="https://opuslabs.freshdesk.co
       },
       "move": {
         "enable": true,
-        "speed": 4,
+        "speed": 3,
         "direction": "none",
         "random": true,
         "straight": false,
