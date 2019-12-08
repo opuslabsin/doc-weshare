@@ -7,6 +7,7 @@
 <meta name="description" content="Technical information to help you setup server and mobile application of Weshare - Social Media App.">
 <meta name="keywords" content=" ">
 <title>Weshare Installation Documentation | Weshare Documentation</title>
+<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/syntax.css">
 
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -42,11 +43,12 @@
 <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
 
-<link rel="alternate" type="application/rss+xml" title="documentation-weshare" href="opuslabsin.github.io/feed.xml">
+<link rel="alternate" type="application/rss+xml" title="documentation-weshare" href="http://localhost:4000/feed.xml">
 
 <style type="text/css">
     body {
-        font-family: 'Open Sans', sans-serif;
+        font-family: 'Montserrat', sans-serif;
+        /*font-family: 'Open Sans', sans-serif;*/
         font-size: 18px;
     }    
 	.home {
@@ -83,7 +85,7 @@
     #scroll-down {
         position: absolute;
         left: 50%;
-        top: 350%;
+        top: 300%;
         z-index: 1;
     }
 
@@ -537,12 +539,6 @@ This guide assumes you have some experience in setting up PHP based web applicat
 </div>
 
 <div class="row">
-  <div class="col-sm-4 col-sm-offset-4 seperator">
-    <img src="images/horizontal-line.svg" width="282" height="6" />
-  </div>
-</div>
-
-<div class="row">
   <div class="col-md-6 section-col">
     <h2 id="server-title" class="section-title">Instructions for setting up server</h2>
     <p>Following section explains how to setup our Laravel based code on server and configure it properly</p>
@@ -664,13 +660,14 @@ If you are integrating with mailgun, you can simply set following values in .env
 
 <div class="row">
   <div class="col-sm-4 col-sm-offset-4 seperator">
-    <img src="images/horizontal-line.svg" width="282" height="6" />
+    <img src="images/horizontal-line.svg" width="282" height="" />
   </div>
 </div>
 
 <div class="row">
   <div class="col-md-6 section-col">
     <h2 id="mobile-title" class="section-title">Instructions for building android mobile app</h2>
+    <p>Following section explains how to connect Andrioid App to server and built it properly</p>
   </div>
   <div class="col-md-6">
     <section id="footer-cta" class="hasAnim on" data-offset="100">
