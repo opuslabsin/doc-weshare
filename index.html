@@ -43,7 +43,7 @@
 <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
 
-<link rel="alternate" type="application/rss+xml" title="documentation-weshare" href="http://localhost:4000/feed.xml">
+<link rel="alternate" type="application/rss+xml" title="documentation-weshare" href="opuslabsin.github.io/feed.xml">
 
 <style type="text/css">
     body {
@@ -532,7 +532,9 @@
 
     
 
-  <div>
+  <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Watch our easy to follow server setup insructions <a href="https://www.youtube.com/watch?v=K7kXLlBtXwU">https://www.youtube.com/watch?v=Zj97ey18ib4</a></div>
+
+<div>
   <h1 id="introduction">Introduction</h1>
   <p>The app is connected with Laravel 5.5 based CMS using REST APIs, the following documentation will guide you through the process to connect the app with your backend.
 This guide assumes you have some experience in setting up PHP based web applications and <a href="https://laravel.com/docs/5.5/">Laravel Framework 5.5</a>. Our mobile app supports Android platform, please ensure you have Android setup on your machine before following this tutorial, if you are new, please follow <a href="https://developer.android.com/">Android Developer Guide</a></p>
@@ -585,7 +587,12 @@ This guide assumes you have some experience in setting up PHP based web applicat
       <p>Follow these steps:</p>
       <ul>
         <li>Extract the <code class="language-plaintext highlighter-rouge">weshare.zip</code> on your server</li>
-        <li>For example if your domain is http://weshare.com then you will be able to access the backend as http://weshare.com/weshare/public</li>
+        <li>For example if your domain is <code class="language-plaintext highlighter-rouge">http://weshare.com</code> then you will be able to access the backend as <code class="language-plaintext highlighter-rouge">http://weshare.com/weshare/public</code></li>
+        <li>Use our simple Installation Wizard to setup your server by visiting <code class="language-plaintext highlighter-rouge">/installer</code></li>
+        <li>For example, <code class="language-plaintext highlighter-rouge">http://weshare.com/weshare/public/installer</code></li>
+        <li>Fill up the form and your server will be configured now</li>
+        <li>After you hit the install button, you will also get the url of admin panel</li>
+        <li>If you want to make any customization or have any specific requirement, please follow below points, otherwise you can now skip to Mobile App section below</li>
       </ul>
     </li>
     <li>
@@ -656,6 +663,9 @@ If you are integrating with mailgun, you can simply set following values in .env
       </ul>
     </li>
   </ol>
+
+  <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> For detailed server setup, refer to <a href="https://www.youtube.com/watch?v=GGX2yUEOcNs">https://www.youtube.com/watch?v=Zj97ey18ib4</a></div>
+
 </div>
 
 <div class="row">
@@ -744,12 +754,12 @@ If you are integrating with mailgun, you can simply set following values in .env
   facebook_app_id and fb_login_protocol_scheme as filled in firebsae console
   <code class="language-plaintext highlighter-rouge">dynamic_link_domain</code> - which you got from firebase console under Dynamic links</li>
         <li>Finally modify <code class="language-plaintext highlighter-rouge">onesignal_app_id</code> with app id obtained from Step 2 for notificaitons</li>
-        <li>Update application’s <code class="language-plaintext highlighter-rouge">BASE_URL</code> with your’s in file app/src/main/java/com/verbosetech/weshare/network/ApiUtils.java</li>
-        <li>Android studio will be asking you to Sync project files since build.gradle is modified. Hit “Sync now”</li>
+        <li>Update application’s <code class="language-plaintext highlighter-rouge">BASE_URL</code> with your’s in file <code class="language-plaintext highlighter-rouge">app/src/main/java/com/verbosetech/weshare/network/ApiUtils.java</code></li>
+        <li>Android studio will be asking you to Sync project files since build.gradle is modified. Hit <code class="language-plaintext highlighter-rouge">Sync now</code></li>
         <li>Done, now you can build apk from build section in navigation menu.</li>
       </ul>
 
-      <p>note: If you are using AdMob make sure you uncomment line numbers 30-32 in AndroidManifest.xml</p>
+      <p><strong>^If you are using AdMob make sure you uncomment line numbers 30-32 in AndroidManifest.xml</strong></p>
     </li>
   </ol>
 
@@ -782,7 +792,7 @@ Please raise an issue ticket at this link <a href="https://opuslabs.freshdesk.co
   <div class="row">
     <div class="col-lg-12 footer" style="text-align: center;">
      &copy;2019 Opus Labs. All rights reserved. <br />
-      Site last generated: Dec 7, 2019 <br />
+      Site last generated: Dec 15, 2019 <br />
      <p style="margin-top: 20px"><img src="images/company_logo.png" alt="Company logo"/></p>
    </div>
  </div>
