@@ -703,63 +703,136 @@ If you are integrating with mailgun, you can simply set following values in .env
 <div>
   <ol>
     <li>
-      <h3 id="setup-firebase-and-api-keys">Setup Firebase and Api keys</h3>
+      <h3 id="android">Android</h3>
+      <p>Before continuing make sure you have :-</p>
       <ul>
-        <li>Login to <a href="http://console.firebase.google.com">http://console.firebase.google.com</a></li>
-        <li>Click on <code class="language-plaintext highlighter-rouge">Add project</code> to add new project -&gt; provide project name as you like and click on Create Project.</li>
-        <li>Now you have to Register apps in this project. Click <code class="language-plaintext highlighter-rouge">Add app</code> -&gt; <code class="language-plaintext highlighter-rouge">choose platform Android</code></li>
-        <li>Each app has its unique ID known as <code class="language-plaintext highlighter-rouge">Package name</code> or <code class="language-plaintext highlighter-rouge">ApplicationId</code>. For more info on how to name one visit https://developer.android.com/studio/build/application-id</li>
-        <li>Enter <code class="language-plaintext highlighter-rouge">package name</code> as asked on firebase console.</li>
-        <li>Set a <code class="language-plaintext highlighter-rouge">nickname</code></li>
-        <li>Enter your <code class="language-plaintext highlighter-rouge">app signing certificate</code>(Important in order to make features work like social login and otp verification. here is how to have one -&gt; https://developers.google.com/android/guides/client-auth)</li>
-        <li>Click Register app. Upon succesful registration of app you’ll be provided with your configuration file(google-services.json) for that app.</li>
-        <li>Go to <code class="language-plaintext highlighter-rouge">Authentication</code> under Developer section and enable google login and facebook login.</li>
-        <li>Go to <code class="language-plaintext highlighter-rouge">Database</code> under Developer section and initiate real time database for chatting</li>
-        <li>Go to <code class="language-plaintext highlighter-rouge">Storage</code> under Developer section  and enable that for media uploading</li>
-        <li>Lastly go to <code class="language-plaintext highlighter-rouge">Dynamic links</code> under Grow section and create app link for sharing</li>
+        <li><strong>Firebase Account</strong> <a href="https://console.firebase.google.com">https://console.firebase.google.com</a></li>
+        <li><strong>Firebase’s Realtime Database is enabled.</strong>  Use following security rule or use <strong>Start in test mode</strong>:
+          <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  {   
+    "rules": {
+      // only authenticated users can read or write to my Firebase
+      ".read": "auth !== null",
+      ".write": "auth !== null"   
+    }
+  }
+</code></pre></div>          </div>
+        </li>
+        <li><strong>Firebase’s Storage is enabled</strong></li>
+        <li><strong>Google or Facebook auth is enabled in Sign-in method in Firebase’s Authentication section</strong></li>
+        <li><strong>SHA-1 fingerprint of your machine</strong> <a href="https://cloud.google.com/solutions/mobile/mobile-firebase-app-engine-flexible#generating_a_sha-1_fingerprint_for_the_app">https://cloud.google.com/solutions/mobile/mobile-firebase-app-engine-flexible#generating_a_sha-1_fingerprint_for_the_app</a></li>
       </ul>
-    </li>
-    <li>
-      <h3 id="setup-onesignal">Setup Onesignal</h3>
+
+      <p>After following the steps given below make sure you have values of all the following keys with you:</p>
+      <ul>
+        <li><strong>applicationId</strong></li>
+        <li><strong>BASE_URL</strong></li>
+        <li><strong>app_name</strong></li>
+        <li><strong>web_client_id</strong></li>
+        <li><strong>facebook_app_id</strong></li>
+        <li><strong>fb_login_protocol_scheme</strong></li>
+        <li><strong>ad_unit_id1</strong></li>
+        <li><strong>ad_unit_id2</strong></li>
+        <li><strong>dynamic_link_domain</strong></li>
+        <li><strong>support_email</strong></li>
+        <li><strong>onesignal_app_id</strong> - follow https://app.onesignal.com/apps/new to add your app and obtain OneSignal app id</li>
+      </ul>
+
+      <p>You will need to update above values in <code class="language-plaintext highlighter-rouge">app/build.gradle</code></p>
+
+      <p><strong><code class="language-plaintext highlighter-rouge">Refactoring</code></strong></p>
+      <ul>
+        <li>Change the <code class="language-plaintext highlighter-rouge">applicationId</code> in <code class="language-plaintext highlighter-rouge">app/build.gradle</code>, set this to the package name you want to keep for your application e.g com.weshare</li>
+        <li>Use the same package name while setting up android app in Firebase in the next step.</li>
+        <li>Logo and placeholders used in app are png images which you will find in <code class="language-plaintext highlighter-rouge">app/src/main/res/drawable</code> folder.</li>
+        <li>To change the images in app simply replace the images at above mentioned location with your images.</li>
+      </ul>
+
+      <p><strong><code class="language-plaintext highlighter-rouge">Firebase Setup</code></strong></p>
+      <ul>
+        <li>
+          <p>Create a Firebase account or log into an existing account.</p>
+        </li>
+        <li>
+          <p>Click <strong>Add project</strong>. Follow the remaining setup steps and click <strong>Create project</strong>.</p>
+        </li>
+      </ul>
+      <p align="center"><img src="images/8.1-firebase-create-project.png" /></p>
+
+      <ul>
+        <li>
+          <p>After the wizard provisions your project, click Continue.</p>
+        </li>
+        <li>
+          <p>In the Overview page of your project, click the Settings gear and then click Project settings.</p>
+        </li>
+        <li>
+          <p>Click Add Firebase to your Android app and follow the wizard</p>
+        </li>
+      </ul>
+      <p align="center"><img src="images/8.3-firebase-add-android-app.png" /></p>
+
+      <ul>
+        <li>
+          <p>In Debug signing certificate SHA-1, enter the SHA-1 value you generated in the previous section.</p>
+        </li>
+        <li>
+          <p>Click Register app.</p>
+        </li>
+        <li>
+          <p>Download the google-services.json file and place it in <code class="language-plaintext highlighter-rouge">app</code> folder.</p>
+        </li>
+      </ul>
+      <p align="center"><img src="images/8.4-firebase-download-config-json.png" /></p>
+
+      <ul>
+        <li>
+          <p>Click Next in the Download config file section and follow the rest of the steps if required.</p>
+        </li>
+        <li>
+          <p>Next click on <strong>Authentication</strong> and click on <strong>Sign-in method</strong></p>
+        </li>
+      </ul>
+      <p align="center"><img src="images/8.5-firebase-sign-in-method.png" /></p>
+
+      <ul>
+        <li>
+          <p>Enable <strong>Phone Authentication</strong></p>
+        </li>
+        <li>
+          <p>Similarly enable <strong>Realtime Database</strong> and <strong>Storage</strong> from side menu.</p>
+        </li>
+      </ul>
+
+      <p><strong><code class="language-plaintext highlighter-rouge">Setup Onesignal</code></strong></p>
       <ul>
         <li>Go to <a href="https://onesignal.com/">https://onesignal.com/</a> signup and create an app</li>
         <li>Add <code class="language-plaintext highlighter-rouge">server key</code> and <code class="language-plaintext highlighter-rouge">sender id</code> from firebase console(Cloud messaging under project settings)</li>
         <li>You’ll get <code class="language-plaintext highlighter-rouge">onesignal app id</code></li>
       </ul>
-    </li>
-    <li>
-      <h3 id="downloadsetup-java-and-android-studio">Download/Setup Java and Android Studio</h3>
+
+      <p><strong><code class="language-plaintext highlighter-rouge">Setup AdMob</code></strong></p>
       <ul>
-        <li>Download Java here: <a href="https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html">https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html</a></li>
-        <li>Download Android Studio here: <a href="https://developer.android.com/studio/">https://developer.android.com/studio/</a>
- Install and restart.</li>
-      </ul>
-    </li>
-    <li>
-      <h3 id="verify-installation">Verify installation</h3>
-      <ul>
-        <li>Easy steps: <a href="https://www.java.com/en/download/help/path.xml">https://www.java.com/en/download/help/path.xml</a></li>
-      </ul>
-    </li>
-    <li>
-      <h3 id="running-project">Running project</h3>
-      <ul>
-        <li>Add configuration files(<code class="language-plaintext highlighter-rouge">google-services.json</code>) acquired in Step 1 above into respective project’s app folder.</li>
-        <li>Open <code class="language-plaintext highlighter-rouge">Android studio</code> -&gt; Click on <code class="language-plaintext highlighter-rouge">Open an existing Android Studio project</code> to navigate and select project.</li>
-        <li>Open and edit app level <code class="language-plaintext highlighter-rouge">build.gradle</code> file (app/build.gradle)</li>
-        <li>Fill out fields in defaultConfig
-  <code class="language-plaintext highlighter-rouge">applicationId</code> - your app package name from firebase console
-  app_name - your app name
-  <code class="language-plaintext highlighter-rouge">web_client_id</code> - copy it from firebase console for google login
-  facebook_app_id and fb_login_protocol_scheme as filled in firebsae console
-  <code class="language-plaintext highlighter-rouge">dynamic_link_domain</code> - which you got from firebase console under Dynamic links</li>
-        <li>Finally modify <code class="language-plaintext highlighter-rouge">onesignal_app_id</code> with app id obtained from Step 2 for notificaitons</li>
-        <li>Update application’s <code class="language-plaintext highlighter-rouge">BASE_URL</code> with your’s in file <code class="language-plaintext highlighter-rouge">app/src/main/java/com/verbosetech/weshare/network/ApiUtils.java</code></li>
-        <li>Android studio will be asking you to Sync project files since build.gradle is modified. Hit <code class="language-plaintext highlighter-rouge">Sync now</code></li>
-        <li>Done, now you can build apk from build section in navigation menu.</li>
+        <li>Go to <a href="https://admob.google.com/home/">https://admob.google.com/home/</a> signup and create an app</li>
+        <li>Create two Banner Ads and copy admob_appid and both banner ids</li>
+        <li>Place <code class="language-plaintext highlighter-rouge">ad_unit_id1</code> and <code class="language-plaintext highlighter-rouge">ad_unit_id2</code> in app/build.gradle</li>
+        <li>Place <code class="language-plaintext highlighter-rouge">admob_app_id</code> in AndroidManifest.xml file. You’ll find <code class="language-plaintext highlighter-rouge">APPLICATION_ID</code> meta-data in end of the file, fill in its value attribute.</li>
       </ul>
 
-      <p><strong>^If you are using AdMob make sure you uncomment line numbers 30-32 in AndroidManifest.xml</strong></p>
+      <p><strong><code class="language-plaintext highlighter-rouge">Configuration</code></strong> and <strong><code class="language-plaintext highlighter-rouge">Theming</code></strong></p>
+      <ul>
+        <li>Open <code class="language-plaintext highlighter-rouge">app/build.gradle</code>, you need to edit/add values in respective fields in <code class="language-plaintext highlighter-rouge">defaultConfig</code> under <code class="language-plaintext highlighter-rouge">android</code></li>
+        <li>Fill in <code class="language-plaintext highlighter-rouge">applicationId</code> with your package name which you registered on firebase console</li>
+        <li>Fill in <code class="language-plaintext highlighter-rouge">app_name</code> and <code class="language-plaintext highlighter-rouge">support_email</code> with your desired app name and support email</li>
+        <li>For notifications follow https://app.onesignal.com/apps/new to add your app and obtain OneSignal app id which will be used in <code class="language-plaintext highlighter-rouge">onesignal_app_id</code> under <code class="language-plaintext highlighter-rouge">manifestPlaceholders</code>.</li>
+        <li>
+          <p>We provide scope for customization of following values:</p>
+
+          <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>resValue 'color', "colorPrimary", "#2196F3"
+resValue 'color', "colorPrimaryDark", "#1976D2"
+resValue 'color', "colorAccent", "#1A237E"
+</code></pre></div>          </div>
+        </li>
+      </ul>
     </li>
   </ol>
 
@@ -791,8 +864,8 @@ Please raise an issue ticket at this link <a href="https://opuslabs.freshdesk.co
   <div class="oval-wrap"><div class="bg-oval"><img src="images/bgoval-dark.svg"></div></div>
   <div class="row">
     <div class="col-lg-12 footer" style="text-align: center;">
-     &copy;2019 Opus Labs. All rights reserved. <br />
-      Site last generated: Dec 15, 2019 <br />
+     &copy;2020 Opus Labs. All rights reserved. <br />
+      Site last generated: Jul 2, 2020 <br />
      <p style="margin-top: 20px"><img src="images/company_logo.png" alt="Company logo"/></p>
    </div>
  </div>
